@@ -378,9 +378,6 @@ a {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  align-items: center;
   position: relative;
   overflow: hidden;
   height: 1.5rem;
@@ -393,8 +390,6 @@ a {
   -webkit-flex: 1;
   flex: 1;
   width: .1px;
-  -webkit-align-self: flex-start;
-  align-self: flex-start;
   text-align: center;
 }
 
@@ -409,7 +404,7 @@ a {
 }
 
 .yo-picker > .unit {
-  display: block;
+  margin: auto;
 }
 
 .yo-picker > .unit:last-child {

@@ -10,7 +10,7 @@
         "ProductMarketPrice": "228.00",
         "ProductComment": "11467",
         "ProductScore": "4.79",
-        "ProductSaleCount": 1047
+        "ProductSaleCount": 0
     },
     {
         "ProductId": "010102",
@@ -22,7 +22,7 @@
         "ProductMarketPrice": "138.00",
         "ProductComment": "37810",
         "ProductScore": "4.76",
-        "ProductSaleCount": 847
+        "ProductSaleCount": 0
     },
     {
         "ProductId": "010103",
@@ -34,7 +34,7 @@
         "ProductMarketPrice": "138.00",
         "ProductComment": "37810",
         "ProductScore": "4.76",
-        "ProductSaleCount": 847
+        "ProductSaleCount": 0
     },
     {
         "ProductId": "010104",
@@ -46,7 +46,7 @@
         "ProductMarketPrice": "399.00",
         "ProductComment": "17625",
         "ProductScore": "4.75",
-        "ProductSaleCount": 53
+        "ProductSaleCount": 0
     },
     {
         "ProductId": "010105",

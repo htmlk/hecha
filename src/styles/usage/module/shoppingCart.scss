@@ -1,0 +1,122 @@
+.container{
+  width:100%;
+  height:100%;
+  @include flexbox();
+  @include flex-direction(column);
+  font-size: .14rem;
+  > *{
+    width:100%;
+  }
+  section{
+    @include flex(1);
+    overflow: hidden;
+    background-color: #fff;
+    width:100%;
+    ul{
+      li{
+        border-bottom: 1px #F1F1F1 solid;
+        padding:.05rem .17rem;
+        @include flexbox();
+        > span{
+          display: none;
+        }
+        .liLeft{
+          @include flexbox();
+          @include flex-direction();
+          @include align-items(center);
+          span{
+            display: inline-block;
+            width:0;
+          }
+          img:first-child{
+            width:.14rem;
+            height: .14rem;
+          }
+          img:last-child{
+            width:.64rem;
+            height:.64rem;
+          }
+        }
+        .liMiddle{
+          p{
+            font-size: .12rem;
+            line-height: .175rem;
+          }
+          h2{
+            @include flexbox();
+            color:#999999;
+            font-size: .12rem;
+            i{
+              margin-right:.15rem;
+            }
+            input{
+              display: block;
+              width:.25rem;
+              text-align: center;
+                margin:0 .05rem;
+            }
+            span{
+              display: block;
+              width:.22rem;
+              height:.22rem;
+              text-align: center;
+              border:1px solid #C1C2C4;
+              padding:0 .05rem;
+            }
+          }
+        }
+        .liRight{
+          @include flexbox();
+          @include flex-direction(column);
+          padding-top:.1rem;
+          p{
+            color:  #F47920;
+            font-size: .12rem;
+          }
+          h2{
+            background-color: #FF2501;
+            color: #fff;
+            width:.45rem;
+            text-align: center;
+            letter-spacing: 1px;
+            padding:.01rem;
+            line-height: .17rem;
+            font-size: .12rem;
+          }
+        }
+      }
+    }
+  }
+  footer{
+    @include flexbox();
+    height:.50rem;
+    background-color: #eeeef0;
+    padding:0 .15rem 0 .15rem;
+    @include justify-content(space-between);
+    font-size: .14rem;
+    line-height: .50rem;
+    color: #888888;
+    .footerLeft{
+      img{
+        width:.15rem;
+      }
+    }
+    .footerRight{
+      @include flexbox();
+      @include align-items(center);
+      p{
+        width:.76rem;
+        height: .36rem;
+        background-color: #FF2501;
+        text-align: center;
+        line-height: .36rem;
+        font-size: .16rem;
+        color: #fff;
+        margin-left: .15rem;
+      }
+      i{
+        color: red;
+      }
+    }
+  }
+}

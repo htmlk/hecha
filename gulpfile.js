@@ -94,18 +94,24 @@ gulp.task('webserver', function () {
               res.end(data);
             });
             return;
-            case '/api/orders.php':
-              res.setHeader('Content-Type', 'application/json');
-              fs.readFile('./mock/sort1.json', function (err, data) {
-                res.end(data);
-              });
-              return;
-            case '/api/users.php':
+          case '/api/orders.php':
             res.setHeader('Content-Type', 'application/json');
-            fs.readFile('./mock/detail.json', function (err, data) {
+            fs.readFile('./mock/sort1.json', function (err, data) {
               res.end(data);
             });
-              return;
+            return;
+          case '/api/users.php':
+          res.setHeader('Content-Type', 'application/json');
+          fs.readFile('./mock/detail.json', function (err, data) {
+            res.end(data);
+          });
+            return;
+          case '/api/show1.php':
+            res.setHeader('Content-Type', 'application/json');
+            fs.readFile('./mock/sort1.json', function (err, data) {
+              res.end(data);
+            });
+            return;
           case '/api/cart':
             // ...
             return;

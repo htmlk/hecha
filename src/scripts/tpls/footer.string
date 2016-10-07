@@ -1,2 +1,24 @@
-<footer>
+<footer id="footer">
+    <ul>
+        <li  data-url="/build/my.html">
+            <i class="iconfont">&#xe61a;</i>
+            <b>我的</b>
+        </li>
+        <li data-url="/build/sort.html">
+            <i class="iconfont dd" >&#xe602;</i>
+            <b>分类</b>
+        </li>
+        <li class="active" data-url="/build/index.html">
+            <i class="iconfont">&#xe613;</i>
+            <b>主页</b>
+        </li>
+        <li data-url="/build/activity.html">
+            <i class="iconfont">&#xe61b;</i>
+            <b>活动</b>
+        </li>
+      <li data-url="/build/machine.html">
+            <i class="iconfont">&#x353e;</i>
+            <b>茶饮机</b>
+        </li>
+    </ul>
 </footer>

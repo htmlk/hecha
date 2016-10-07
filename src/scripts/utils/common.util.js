@@ -11,8 +11,9 @@ var common = {
   renderHtml:function(str){
     $('body').prepend(str);
   },
-  switchPage:function(){
-    $('#footer').on('tap','li',function () {
+  switchPage: function (index) {
+    $('#footer ul li').eq(index).addClass('active').siblings().removeClass('active');
+    $('#footer').on('tap', 'li', function () {
       location.href = $(this).attr('data-url');
     })
   }

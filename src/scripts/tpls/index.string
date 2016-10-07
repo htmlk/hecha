@@ -1,0 +1,132 @@
+<div class="container">
+  <div class="searchBox">
+      <header>
+        <ul>
+            <li class="head-logo searchBack"><img src="http://m.hecha.cn/img/my/back.png"></li>
+            <li class="header-input" >
+                <h2> 搜索结果</h2>
+            </li>
+            <li class="iconfont">&#xe66c;</li>
+        </ul>
+      </header>
+       <div class="searchCont">
+         <!-- <div class="cont1">
+           <ul>
+             <li class="cont1_1"><img src=''></li>
+             <li class="cont1_2">
+               <p></P>
+                <h2><i></i><span></span></h2>
+                <h3>人评价</h3>
+             </li>
+          </ul>
+         </div> -->
+      </div>
+  </div>
+  <div class="boxcontent">
+    <header>
+        <ul>
+            <li class="head-logo"><img src="/build/images/logo.png"></li>
+            <li class="header-input">
+                <img src="/build/images/search.png">
+                <input type="text" value  placeholder="搜索">
+            </li>
+            <li><a href="shoppingCart" class="iconfont">&#xe66c;</a></li>
+        </ul>
+    </header>
+    <nav>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="http://img1.hecha.cn/MobileImage/20160829/20160829183159678.jpg"></div>
+          <div class="swiper-slide"><img src="http://img1.hecha.cn/MobileImage/20160829/20160829185059303.jpg"></div>
+          <div class="swiper-slide"><img src="http://img1.hecha.cn/MobileImage/20160829/20160829191000772.jpg"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </nav>
+    <section>
+
+              <div class="p1">
+                  <img src="/build/images/p1-top.jpg">
+                  <img src="http://img1.hecha.cn/MobileImage/20160810/20160810143600739.jpg">
+                  <img src="http://img1.hecha.cn/MobileImage/20160810/20160810141401849.jpg">
+                  <img src="http://img1.hecha.cn/MobileImage/20160810/20160810144301411.jpg">
+                  <img src="http://img1.hecha.cn/MobileImage/20160810/20160810140402771.jpg">
+                  <img src="http://img1.hecha.cn/MobileImage/20160810/20160810143502661.jpg">
+                  <img src="http://img1.hecha.cn/MobileImage/20160810/20160810144602614.jpg">
+                  <img src="/build/images/p1-footer.jpg">
+              </div>
+              <div class="p2">
+                  <img src="/build/images/p2-top.jpg">
+                  <img src="http://img1.hecha.cn/MobileImage/20160810/20160810140303849.jpg">
+                  <img src="http://img1.hecha.cn/MobileImage/20160810/20160810142103458.jpg">
+                  <img src="http://img1.hecha.cn/MobileImage/20160810/20160810143303067.jpg">
+                  <img src="/build/images/p2-footer.jpg">
+              </div>
+            <div class="p3">
+                  <img src="/build/images/p3-top.jpg">
+                  <div  class="p3_1">
+
+                    <script id="test0" type="text/html">
+                      <a href="detail.html?{{ProductId}}"><img  class="p3-img" src={{ProductImage}}>
+                      <p>{{ProductName}}</p>
+                      <h2>￥{{ProductSalePrice}}</h2></a>
+                    </script>
+                  </div>
+                <div  class="p3_1">
+
+                    <script id="test1" type="text/html">
+
+                      <a href="detail.html?{{ProductId}}"><img  class="p3-img" src={{ProductImage}}>
+                      <p>{{ProductName}}</p>
+                      <h2>￥{{ProductSalePrice}}</h2></a>
+
+                    </script>
+                  </div>
+                   <div  class="p3_1">
+
+                    <script id="test2" type="text/html">
+                      <a href="detail.html?{{ProductId}}"><img  class="p3-img" src={{ProductImage}}>
+                      <p>{{ProductName}}</p>
+                      <h2>￥{{ProductSalePrice}}</h2></a>
+                    </script>
+                  </div>
+                  <div  class="p3_1">
+
+                    <script id="test3" type="text/html">
+                      <a href="detail.html?{{ProductId}}"><img  class="p3-img" src={{ProductImage}}>
+                      <p>{{ProductName}}</p>
+                      <h2>￥{{ProductSalePrice}}</h2></a>
+                    </script>
+                  </div>
+                  <div  class="p3_1">
+
+                    <script id="test4" type="text/html">
+                      <a href="detail.html?{{ProductId}}"><img  class="p3-img" src={{ProductImage}}>
+                      <p>{{ProductName}}</p>
+                      <h2>￥{{ProductSalePrice}}</h2></a>
+                    </script>
+                  </div>
+                  <div  class="p3_1">
+
+                    <script id="test5" type="text/html">
+                      <a href="detail.html?{{ProductId}}"><img  class="p3-img" src={{ProductImage}}>
+                      <p>{{ProductName}}</p>
+                      <h2>￥{{ProductSalePrice}}</h2></a>
+                    </script>
+                  </div>
+                  <img src="/build/images/p3-footer.jpg">
+              </div>
+
+
+    </section>
+</div>
+</div>
+
+<script id="list" type="text/html">
+  <ul>
+    {{each data as value i}}
+    <li><span><i><img src={{value.img}} alt=""></i><b>{{value.title}}</b></span></li>
+    {{/each}}
+  </ul>
+</script>

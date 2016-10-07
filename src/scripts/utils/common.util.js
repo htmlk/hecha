@@ -8,6 +8,9 @@ var common = {
   append:function($el,str){
     $el.append(str);
   },
+  renderHtml:function(str){
+    $('body').prepend(str);
+  },
   switchPage:function(){
     $('#footer').on('tap','li',function () {
       location.href = $(this).attr('data-url');

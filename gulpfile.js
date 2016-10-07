@@ -94,9 +94,18 @@ gulp.task('webserver', function () {
               res.end(data);
             });
             return;
-          case '/api/users':
-            // ...
-            return;
+            case '/api/orders.php':
+              res.setHeader('Content-Type', 'application/json');
+              fs.readFile('./mock/sort1.json', function (err, data) {
+                res.end(data);
+              });
+              return;
+            case '/api/users.php':
+            res.setHeader('Content-Type', 'application/json');
+            fs.readFile('./mock/detail.json', function (err, data) {
+              res.end(data);
+            });
+              return;
           case '/api/cart':
             // ...
             return;

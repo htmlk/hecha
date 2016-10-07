@@ -1,0 +1,42 @@
+<div class="container">
+    <header>
+        <div class="headerLeft"><a href="/build/index.html"><img src="/build/images/back.png" alt=""></a></div>
+        <p>购物车</p>
+        <div class="headerRight">编辑</div>
+    </header>
+    <section id="index-scroll">
+        <script id="list" type="text/html">
+            <ul id="loadUl">
+                {{each data as value i}}
+                <li>
+                  <span>{{value.ProductId}}</span>
+                  <div class="liLeft">
+                    <img src="/build/images/wxz.png">
+                    <span></span>
+                    <img src={{value.ProductImage}}>
+                  </div>
+                  <div class="liMiddle">
+                    <p>{{value.ProductName}}</p>
+                    <h2><i>数量:</i><span class="sub">-</span><input type="text" value={{value.ProductSaleCount}}><span class="add">+</span></h2>
+                  </div>
+                  <div class="liRight">
+                    <p><span>￥</span><i>{{value.ProductSalePrice}}</i></p>
+                    <h2>删除商品</h2>
+                  </div>
+                </li>
+                {{/each}}
+            </ul>
+        </script>
+    </section>
+    <footer>
+        <div class="footerLeft">
+            <img src="/build/images/wxz.png">
+            <span>全选</span>
+        </div>
+        <div class="footerRight">
+            <span>商品</span>
+            <i>￥<b>0.00</b></i>
+            <p>结算</p>
+        </div>
+    </footer>
+</div>

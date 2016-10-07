@@ -5,6 +5,7 @@ var common = require('../utils/common.util.js');
 
 common.renderBody($('body'),str);
 common.append($('.container'),footer);
+common.switchPage(1);
 var sortNum=window.location.href.split('?')[1];
 var dataJson;
 var temp=-1;

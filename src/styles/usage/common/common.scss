@@ -2,15 +2,16 @@
   display: none;
 }
 
-$baseColor: #65a51e;//绿色1
+$baseColor:#65a51e;
+$sortMenuBaseColor:#65a51e;
 $bgcolor1:#fff;//白色
 
- @font-face {
+@font-face {
     font-family: 'iconfont';
     /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
     src:url('/build/images/fonts/iconfont-footer.woff') format('woff'),
     /* chrome、firefox */
-     url('/build/images/fonts/iconfont-footer.ttf') format('truetype');
+    url('/build/images/fonts/iconfont-footer.ttf') format('truetype');
 }
 @font-face {
     font-family: 'iconfont';

@@ -1,6 +1,6 @@
-var changeLostarage = require('../libs/lostaryFrame.js');
+﻿var changeLostarage = require('../libs/lostaryFrame.js');
 
-var render = require('../untils/common.js');
+var render = require('../utils/common.util.js');
 
 var scroll = require('../libs/iscroll-probe.js');
 

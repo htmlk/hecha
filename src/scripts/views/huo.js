@@ -1,8 +1,10 @@
 var str=require('../tpls/huo.string');
+var footer=require('../tpls/footer.string');
 var common=require('../utils/common.util.js');
 
 common.body($('body'),str);
-
+common.append($('.container2'),footer);
+common.switchPage(3);
 
 //swiper定义
 var mySwiper=new Swiper('#index-swiper',{

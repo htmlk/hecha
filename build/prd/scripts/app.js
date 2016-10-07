@@ -40,24 +40,69 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(24);
+	module.exports = __webpack_require__(1);
 
 
 /***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
 
-/***/ 4:
+	/*** IMPORTS FROM imports-loader ***/
+	var define = false;
+
+	__webpack_require__(2);
+
+
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*** IMPORTS FROM imports-loader ***/
+	var define = false;
+
+
+	var str=__webpack_require__(3);
+	var footer=__webpack_require__(4);
+
+	var common=__webpack_require__(5);
+
+	common.body($('body'),str);
+	common.append($('.container'),footer);
+	common.switchPage(4);
+
+	window.onload=function () {
+	    var myScroll = new IScroll("#index-scroll",{
+	        mouseWheel:true,
+	        scrollbars:true,
+	        interactiveScrollbars:true,
+	});
+	};
+
+	var myScroll=new IScroll('#index-scroll');
+	myScroll.on('scrollEnd',function () {
+	    hidescrollbar=true;
+	});
+
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"container\">    <header>        <ul>            <li class=\"head-logo\"><img src=\"/build/images/logo.png\"></li>            <li class=\"header-input\">                <img src=\"/build/images/search.png\">                <input type=\"text\" value  placeholder=\"搜索\">            </li>            <li><a href=\"shoppingCart\" class=\"iconfont\">&#xe66c;</a></li>        </ul>    </header>    <section id=\"index-scroll\">        <div>            <img class=\"i2\" src=\"/images/2.jpg\" alt=\"\">            <img class=\"i3\" src=\"/images/3.png\" alt=\"\">            <video src=\"\"></video>            <img class=\"i4\" src=\"/images/4.png\" alt=\"\">            <img class=\"i7\" src=\"/images/7.jpg\" alt=\"\">            <img class=\"i8\" src=\"/images/8.jpg\" alt=\"\">            <img class=\"i9\" src=\"/images/9.jpg\" alt=\"\">            <img class=\"i10\" src=\"/images/10.jpg\" alt=\"\">            <img class=\"i11\" src=\"/images/11.jpg\" alt=\"\">            <img  class=\"i13\" src=\"/images/13.jpg\" alt=\"\">            <img class=\"i14\" src=\"/images/14.jpg\" alt=\"\">            <img class=\"i15\" src=\"/images/15.jpg\" alt=\"\">            <img class=\"i16\" src=\"/images/16.jpg\" alt=\"\">            <img class=\"i17\" src=\"/images/17.jpg\" alt=\"\">            <img class=\"i17\" src=\"/images/18.jpg\" alt=\"\">            <img class=\"i17\" src=\"/images/19.jpg\" alt=\"\">        </div>    </section></div>"
+
+/***/ },
+/* 4 */
 /***/ function(module, exports) {
 
 	module.exports = "<footer id=\"footer\">    <ul>        <li  data-url=\"/build/my.html\">            <i class=\"iconfont\">&#xe61a;</i>            <b>我的</b>        </li>        <li data-url=\"/build/sortMenu.html\">            <i class=\"iconfont dd\" >&#xe602;</i>            <b>分类</b>        </li>        <li class=\"active\" data-url=\"/build/index.html\">            <i class=\"iconfont\">&#xe613;</i>            <b>主页</b>        </li>        <li data-url=\"/build/activity.html\">            <i class=\"iconfont\">&#xe61b;</i>            <b>活动</b>        </li>      <li data-url=\"/build/machine.html\">            <i class=\"iconfont\">&#x353e;</i>            <b>茶饮机</b>        </li>    </ul></footer>"
 
 /***/ },
-
-/***/ 5:
+/* 5 */
 /***/ function(module, exports) {
 
 	/*** IMPORTS FROM imports-loader ***/
@@ -91,49 +136,5 @@
 
 
 
-/***/ },
-
-/***/ 24:
-/***/ function(module, exports, __webpack_require__) {
-
-	/*** IMPORTS FROM imports-loader ***/
-	var define = false;
-
-	__webpack_require__(25);
-
-
-
-/***/ },
-
-/***/ 25:
-/***/ function(module, exports, __webpack_require__) {
-
-	/*** IMPORTS FROM imports-loader ***/
-	var define = false;
-
-	var str = __webpack_require__(26);
-	var footer=__webpack_require__(4);
-
-	var common = __webpack_require__(5);
-
-	common.renderBody($('body'),str);
-	common.append($('.container'),footer);
-	common.switchPage(1);
-	window.onload=function(){
-	  var myScroll=new IScroll("#index-scroll",{
-	    click:true
-	  });
-	};
-
-
-
-/***/ },
-
-/***/ 26:
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"container\">  <header>    <ul>      <li>        <a href=\"index.html\"><img src=\"/build/images/sort.images/back.png\" alt=\"返回\"></a>      </li>      <li>分类</li>      <li></li>    </ul>  </header>  <section id=\"index-scroll\">    <ul>      <li><a href=\"index.html\"><img src=\"/build/images/sort.images/sortMenu1.jpg\" alt=\"\"></a></li>      <li><a href=\"sort.html?1\"><img src=\"/build/images/sort.images/sortMenu2.jpg\" alt=\"\"></a></li>      <li><a href=\"sort.html?2\"><img src=\"/build/images/sort.images/sortMenu3.jpg\" alt=\"\"></a></li>      <li><a href=\"sort.html?3\"><img src=\"/build/images/sort.images/sortMenu4.jpg\" alt=\"\"></a></li>      <li><a href=\"sort.html?4\"><img src=\"/build/images/sort.images/sortMenu5.jpg\" alt=\"\"></a></li>      <li><a href=\"sort.html?5\"><img src=\"/build/images/sort.images/sortMenu6.jpg\" alt=\"\"></a></li>      <li><a href=\"sort.html?6\"><img src=\"/build/images/sort.images/sortMenu7.jpg\" alt=\"\"></a></li>      <li><a href=\"sort.html?7\"><img src=\"/build/images/sort.images/sortMenu8.jpg\" alt=\"\"></a></li>      <li><a href=\"sort.html?8\"><img src=\"/build/images/sort.images/sortMenu9.jpg\" alt=\"\"></a></li>    </ul>  </section></div>"
-
 /***/ }
-
-/******/ });
+/******/ ]);

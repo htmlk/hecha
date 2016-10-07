@@ -665,10 +665,10 @@ a {
 .iconfont {
   font-family: iconfont; }
 
-.container footer {
+.container2 footer {
   height: 16vw;
   background: #eeeef0; }
-  .container footer ul {
+  .container2 footer ul {
     width: 100%;
     height: 100%;
     display: -webkit-box;
@@ -681,12 +681,12 @@ a {
     -webkit-justify-content: center;
     justify-content: center;
     border-top: solid 0.5px #d9d9d9; }
-    .container footer ul .active i {
+    .container2 footer ul .active i {
       border: solid 0.5px #65a51e;
       color: #65a51e; }
-    .container footer ul .active b {
+    .container2 footer ul .active b {
       color: #65a51e; }
-    .container footer ul li {
+    .container2 footer ul li {
       -webkit-box-flex: 1;
       -webkit-flex: 1;
       flex: 1;
@@ -704,13 +704,13 @@ a {
       -webkit-justify-content: center;
       justify-content: center;
       padding-top: 2.2vw; }
-      .container footer ul li b {
+      .container2 footer ul li b {
         height: 7.38vw;
         line-height: 7.38vw;
         font-weight: normal;
         font-size: 3.69vw;
         color: #aaa; }
-      .container footer ul li i {
+      .container2 footer ul li i {
         width: 8.6vw;
         height: 8.6vw;
         border-radius: 4.3vw;
@@ -720,12 +720,11 @@ a {
         text-align: center;
         border: solid 0.5px #aaa;
         color: #aaa; }
-    .container footer ul .dd {
+    .container2 footer ul .dd {
       font-size: 5.6vw;
       line-height: 8.75vw; }
 
-.container {
-  width: 100%;
+.container2 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -734,50 +733,179 @@ a {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   flex-direction: column; }
-  .container header {
+  .container2 > * {
+    width: 100%; }
+  .container2 header {
     width: 100%;
     height: 12vw;
     background-color: #65a51e; }
-    .container header ul {
+    .container2 header ul {
       height: 100%;
       display: -webkit-box;
       display: -webkit-flex;
       display: flex; }
-      .container header ul li {
+      .container2 header ul li {
         margin-left: 3vw;
         line-height: 12vw; }
-        .container header ul li:first-child img {
+        .container2 header ul li:first-child img {
           height: 4vw; }
-        .container header ul li:nth-child(2) {
+        .container2 header ul li:nth-child(2) {
           text-align: center;
-          font-size: 4.7vw;
+          font-size: 4vw;
           color: #fff;
           -webkit-box-flex: 8;
           -webkit-flex: 8;
           flex: 8; }
-        .container header ul li:last-child {
+        .container2 header ul li:last-child {
           -webkit-box-flex: 1;
           -webkit-flex: 1;
-          flex: 1; }
-  .container section {
-    background-color: #fff;
-    overflow: hidden;
+          flex: 1;
+          background-color: red; }
+  .container2 #huodong-hang {
+    background: #ffffff;
+    height: 40px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex; }
+    .container2 #huodong-hang div {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      flex: 1;
+      position: relative;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      font-size: 14px;
+      text-align: center;
+      line-height: 40px; }
+      .container2 #huodong-hang div::after {
+        pointer-events: none;
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        content: "\0020";
+        border-color: #cccccc;
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0; }
+        @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+          .container2 #huodong-hang div::after {
+            width: 100%;
+            height: 100%; } }
+        @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+          .container2 #huodong-hang div::after {
+            width: 200%;
+            height: 200%;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5); } }
+        @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+          .container2 #huodong-hang div::after {
+            width: 300%;
+            height: 300%;
+            -webkit-transform: scale(0.33333);
+            transform: scale(0.33333); } }
+      .container2 #huodong-hang div.active {
+        position: relative; }
+        .container2 #huodong-hang div.active::after {
+          pointer-events: none;
+          position: absolute;
+          z-index: 999;
+          top: 0;
+          left: 0;
+          overflow: hidden;
+          content: "\0020";
+          border-color: orange;
+          border-style: solid;
+          border-width: 0 0 1px 0;
+          -webkit-transform-origin: 0 0;
+          transform-origin: 0 0; }
+          @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+            .container2 #huodong-hang div.active::after {
+              width: 100%;
+              height: 100%; } }
+          @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+            .container2 #huodong-hang div.active::after {
+              width: 200%;
+              height: 200%;
+              -webkit-transform: scale(0.5);
+              transform: scale(0.5); } }
+          @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+            .container2 #huodong-hang div.active::after {
+              width: 300%;
+              height: 300%;
+              -webkit-transform: scale(0.33333);
+              transform: scale(0.33333); } }
+  .container2 section {
+    background: #ffffff;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
-    flex: 1; }
-    .container section ul {
+    flex: 1;
+    overflow: hidden;
+    width: 100%; }
+    .container2 section .swiper-container {
+      height: 100%; }
+      .container2 section .swiper-container .swiper-wrapper {
+        width: 300%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        flex-direction: row; }
+        .container2 section .swiper-container .swiper-wrapper .swiper-slide {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+          flex: 1;
+          width: 375px; }
+    .container2 section dl {
       display: -webkit-box;
       display: -webkit-flex;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      flex-direction: column; }
-      .container section ul li {
-        width: 96%;
-        margin: 3% auto 0;
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-        flex: 1; }
-        .container section ul li img {
-          width: 100%; }
+      padding: 3%;
+      margin: 5% auto 0;
+      background: #f5f5f5;
+      position: relative; }
+      .container2 section dl .a {
+        z-index: 2;
+        width: 40px;
+        height: 60px;
+        position: absolute;
+        top: 0;
+        left: 14px; }
+      .container2 section dl dt {
+        margin: 5% 0 0 0;
+        width: 86px;
+        height: 86px; }
+        .container2 section dl dt img {
+          display: block;
+          z-index: 1;
+          width: 100%;
+          height: 100%; }
+      .container2 section dl dd {
+        margin: 0 10px; }
+        .container2 section dl dd .name {
+          color: #444; }
+        .container2 section dl dd .jieshao {
+          margin: 16px 0;
+          color: #89898a;
+          font-size: 12px; }
+          .container2 section dl dd .jieshao .jia {
+            margin: 0 4px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ff8561; }
+          .container2 section dl dd .jieshao .shijia {
+            color: #89898a;
+            font-size: 12px;
+            text-decoration: line-through; }
+        .container2 section dl dd .yishou {
+          font-size: 12px;
+          color: #ff8561;
+          text-align: right; }

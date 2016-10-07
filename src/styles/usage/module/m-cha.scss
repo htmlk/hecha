@@ -71,8 +71,5 @@
       }
     }
   }
-  footer{
-    height: 74px;
-    background: #000000;
-  }
+  @extend %footer;
 }

@@ -217,6 +217,6 @@ gulp.task('watch', function () {
 });
 
 // 配置 default 任务，执行任务队列
-gulp.task('default', ['watch', 'webserver','copy-images'], function () {
+gulp.task('default', ['watch', 'webserver','copy-images','scss'], function () {
   console.log('任务队列执行完毕~');
 });

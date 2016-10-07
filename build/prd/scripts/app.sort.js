@@ -40,38 +40,85 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(1);
+	module.exports = __webpack_require__(21);
 
 
 /***/ },
-/* 1 */
+
+/***/ 4:
+/***/ function(module, exports) {
+
+	module.exports = "<footer id=\"footer\">    <ul>        <li  data-url=\"/build/my.html\">            <i class=\"iconfont\">&#xe61a;</i>            <b>我的</b>        </li>        <li data-url=\"/build/sortMenu.html\">            <i class=\"iconfont dd\" >&#xe602;</i>            <b>分类</b>        </li>        <li class=\"active\" data-url=\"/build/index.html\">            <i class=\"iconfont\">&#xe613;</i>            <b>主页</b>        </li>        <li data-url=\"/build/activity.html\">            <i class=\"iconfont\">&#xe61b;</i>            <b>活动</b>        </li>      <li data-url=\"/build/machine.html\">            <i class=\"iconfont\">&#x353e;</i>            <b>茶饮机</b>        </li>    </ul></footer>"
+
+/***/ },
+
+/***/ 5:
+/***/ function(module, exports) {
+
+	/*** IMPORTS FROM imports-loader ***/
+	var define = false;
+
+	var common = {
+	  renderBody: function ($el,str) {
+	      $el.prepend(str);
+	  },
+	  body:function ($el, str) {
+	      $el.prepend(str);
+	  },
+	  inner:function($el,str){
+	    $el.html(str);
+	  },
+	  append:function($el,str){
+	    $el.append(str);
+	  },
+	  renderHtml:function(str){
+	    $('body').prepend(str);
+	  },
+	  switchPage: function (index) {
+	    $('#footer ul li').eq(index).addClass('active').siblings().removeClass('active');
+	    $('#footer').on('tap', 'li', function () {
+	      location.href = $(this).attr('data-url');
+	    })
+	  }
+	};
+
+	module.exports = common;
+
+
+
+/***/ },
+
+/***/ 21:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	__webpack_require__(2);
+	__webpack_require__(22);
 
 
 
 /***/ },
-/* 2 */
+
+/***/ 22:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	var str = __webpack_require__(3);
+	var str = __webpack_require__(23);
 	var footer=__webpack_require__(4);
 
 	var common = __webpack_require__(5);
 
 	common.renderBody($('body'),str);
 	common.append($('.container'),footer);
+	common.switchPage(1);
 	var sortNum=window.location.href.split('?')[1];
 	var dataJson;
 	var temp=-1;
@@ -208,44 +255,12 @@
 
 
 /***/ },
-/* 3 */
+
+/***/ 23:
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"container\">  <header>    <ul>      <li>        <a href=\"sortMenu.html\"><img src=\"/build/images/sort.images/back.png\" alt=\"返回\"></a>      </li>      <li id=\"menu\">        <script id=\"listMenu\" type=\"text/html\">          {{each data as value}}          {{/each}}        </script>      </li>      <li></li>    </ul>  </header>  <nav>    <ul id=\"choose\">      <li class=\"active\">选择分类      </li>      <li>选择排序</li>    </ul>    <ul id=\"fenlei\">      <script id=\"listFenlei\" type=\"text/html\">        {{each data as value}}          <li>{{value}}</li>        {{/each}}      </script>    </ul>    <ul id=\"paixu\">      <li>销量（高到低）</li>      <li>销量（低到高）</li>      <li>价格（高到低）</li>      <li>价格（低到高）</li>    </ul>  </nav>  <section id=\"index-scroll\">    <script id=\"list\" type=\"text/html\">      <ul>        {{each data as value}}        <li data-url=\"detail.html?{{value.ProductId}}\">          <div class=\"goodLeft\">            <img src={{value.ProductImage}} alt=\"\">          </div>          <div class=\"goodRight\">            <p class=\"goodName\">{{value.ProductName}}</p>            <p class=\"goodPrice\">              ￥<span class=\"nowPrice\">{{value.ProductSalePrice}}</span>              <del>市场价:￥<span class=\"oldPrice\">{{value.ProductMarketPrice}}</span></del>            </p>            <p class=\"pingjia\">评价&nbsp;&nbsp;{{value.ProductComment}}</p>          </div>        </li>        {{/each}}      </ul>    </script>  </section></div>"
 
-/***/ },
-/* 4 */
-/***/ function(module, exports) {
-
-	module.exports = "<footer></footer>"
-
-/***/ },
-/* 5 */
-/***/ function(module, exports) {
-
-	/*** IMPORTS FROM imports-loader ***/
-	var define = false;
-
-	var common = {
-	  renderBody: function ($el,str) {
-	      $el.prepend(str);
-	  },
-	  inner:function($el,str){
-	    $el.html(str);
-	  },
-	  append:function($el,str){
-	    $el.append(str);
-	  },
-	  switchPage:function(){
-	    $('#footer').on('tap','li',function () {
-	      location.href = $(this).attr('data-url');
-	    })
-	  }
-	};
-
-	module.exports = common;
-
-
-
 /***/ }
-/******/ ]);
+
+/******/ });

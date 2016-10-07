@@ -1,5 +1,14 @@
 <div class="container2">
-    <header></header>
+    <header>
+		<ul>
+		  <li>
+			<a href="sortMenu.html"><img src="/build/images/sort.images/back.png" alt="返回"></a>
+		  </li>
+		  <li id="menu">活动</script>
+		  </li>
+		  <li></li>
+		</ul>
+	</header>
     <div id="huodong-hang">
         <div class="active">全部</div>
         <div class="tuan">团购</div>
@@ -69,5 +78,4 @@
             </div>
         </div>
     </section>
-    <footer></footer>
 </div>

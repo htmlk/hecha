@@ -1,0 +1,27 @@
+html,body{
+  width:100%;
+  height:100%;
+  font-size: 31.25vw;
+}
+header{
+  color:#fff;
+  height:.4rem;
+  background-color: #65a51e;
+  line-height: .4rem;
+  text-align: center;
+  @include flexbox() ;
+  .headerLeft{
+    width:.57rem;
+    img{
+      width:.2rem;
+    }
+  }
+  p{
+    @include flex(1);
+    font-size: .16rem;
+  }
+  .headerRight{
+    width: .4rem;
+    font-size: .14rem;
+  }
+}

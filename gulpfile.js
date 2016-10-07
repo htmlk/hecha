@@ -13,13 +13,13 @@ var named = require('vinyl-named');
 var webpack = require('gulp-webpack');
 var uglify = require('gulp-uglify');
 
-//引入fs url模块
-var fs=require('fs');
-var url=require('url');
+// 引入 fs url 模块
+var fs = require('fs');
+var url = require('url');
 
 // 引入 rev revCollector 模块
-var rev = require('gulp-rev');  //生成版本号
-var revCollector = require('gulp-rev-collector');  //修改文件时同步版本号
+var rev = require('gulp-rev');
+var revCollector = require('gulp-rev-collector');
 
 // 引入 gulp-sequence 模块
 var sequence = require('gulp-sequence');
@@ -29,28 +29,73 @@ gulp.task('webserver', function () {
   gulp.src('./')
     .pipe(webserver({
       host: 'localhost',
-      port: 80,
+      port: 8082,
       directoryListing: {
         enable: true,
         path: './'
       },
       livereload: true,
 
-      //mock数据
+      // mock 数据
       middleware: function (req, res, next) {
         var urlObj = url.parse(req.url, true);
         switch (urlObj.pathname) {
-          case '/api/orders.php':
+          case '/api/sortMenu.php':
+            res.setHeader('Content-Type', 'application/json');
+            fs.readFile('./mock/sortMenu.json', function (err, data) {
+              res.end(data);
+            });
+            return;
+          case '/api/sort1.php':
             res.setHeader('Content-Type', 'application/json');
             fs.readFile('./mock/sort1.json', function (err, data) {
               res.end(data);
             });
             return;
-          case '/api/users.php':
-          res.setHeader('Content-Type', 'application/json');
-          fs.readFile('./mock/detail.json', function (err, data) {
-            res.end(data);
-          });
+          case '/api/sort2.php':
+            res.setHeader('Content-Type', 'application/json');
+            fs.readFile('./mock/sort2.json', function (err, data) {
+              res.end(data);
+            });
+            return;
+          case '/api/sort3.php':
+            res.setHeader('Content-Type', 'application/json');
+            fs.readFile('./mock/sort3.json', function (err, data) {
+              res.end(data);
+            });
+            return;
+          case '/api/sort4.php':
+            res.setHeader('Content-Type', 'application/json');
+            fs.readFile('./mock/sort4.json', function (err, data) {
+              res.end(data);
+            });
+            return;
+          case '/api/sort5.php':
+            res.setHeader('Content-Type', 'application/json');
+            fs.readFile('./mock/sort5.json', function (err, data) {
+              res.end(data);
+            });
+            return;
+          case '/api/sort6.php':
+            res.setHeader('Content-Type', 'application/json');
+            fs.readFile('./mock/sort6.json', function (err, data) {
+              res.end(data);
+            });
+            return;
+          case '/api/sort7.php':
+            res.setHeader('Content-Type', 'application/json');
+            fs.readFile('./mock/sort7.json', function (err, data) {
+              res.end(data);
+            });
+            return;
+          case '/api/sort8.php':
+            res.setHeader('Content-Type', 'application/json');
+            fs.readFile('./mock/sort8.json', function (err, data) {
+              res.end(data);
+            });
+            return;
+          case '/api/users':
+            // ...
             return;
           case '/api/cart':
             // ...
@@ -68,7 +113,7 @@ var cssFiles = [
 gulp.task('scss', function () {
   gulp.src(cssFiles)
     .pipe(sass().on('error', sass.logError))
-    .pipe(minifyCSS())
+    // .pipe(minifyCSS())
     .pipe(gulp.dest('./build/prd/styles/'));
 });
 
@@ -89,18 +134,19 @@ gulp.task('packjs', function () {
             test: /\.js$/,
             loader: 'imports?define=>false',
             exclude: './src/scripts/libs/zepto.js'
-          },{
+          },
+          {
             test: /\.string$/,
             loader: 'string'
           }
         ]
       }
     }))
-    .pipe(uglify().on('error', function (err) {
-      console.log('\x07', err.lineNumber, err.message);
-      return this.end();
-    }))
-    .pipe(gulp.dest('./build/prd/scripts'));
+    // .pipe(uglify().on('error', function (err) {
+    //   console.log('\x07', err.lineNumber, err.message);
+    //   return this.end();
+    // }))
+    .pipe(gulp.dest('./build/prd/scripts/'));
 });
 
 // 版本号控制
@@ -141,24 +187,15 @@ gulp.task('copy-images', function () {
     .pipe(gulp.dest('./build/images/'));
 });
 
-//拷贝zepto.js到build文件夹
-gulp.task('copy-zepto',function(){
-  gulp.src('./src/scripts/libs/zepto.js')
-  .pipe(gulp.dest('./build/prd/scripts'));
-});
-
 // 侦测 文件变化， 执行相应任务
 gulp.task('watch', function () {
   gulp.watch('./*.html', ['copy-index']);
   gulp.watch('./images/**/*', ['copy-images']);
-  gulp.watch('./src/styles/**/*.scss', ['scss']);
+  gulp.watch('./src/styles/**/*', ['scss']);
   gulp.watch('./src/scripts/**/*', ['packjs']);
 });
 
 // 配置 default 任务，执行任务队列
-gulp.task('default', ['watch', 'webserver'], function () {
+gulp.task('default', ['watch', 'webserver','copy-images'], function () {
   console.log('任务队列执行完毕~');
 });
-// gulp.task('default', ['copy-images','copy-index','packjs','scss', 'webserver'], function () {
-//   console.log('任务队列执行完毕~');
-// });

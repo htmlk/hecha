@@ -4,7 +4,7 @@
             <i class="iconfont">&#xe61a;</i>
             <b>我的</b>
         </li>
-        <li data-url="/build/sort.html">
+        <li data-url="/build/sortMenu.html">
             <i class="iconfont dd" >&#xe602;</i>
             <b>分类</b>
         </li>

@@ -112,6 +112,12 @@ gulp.task('webserver', function () {
               res.end(data);
             });
             return;
+          case '/api/list.php':
+              res.setHeader('Content-Type', 'application/json');
+              fs.readFile('./mock/list.json', function (err, data) {
+                  res.end(data);
+              });
+              return;
           case '/api/cart':
             // ...
             return;

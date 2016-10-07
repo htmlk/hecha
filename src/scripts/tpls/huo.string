@@ -1,0 +1,73 @@
+<div class="container2">
+    <header></header>
+    <div id="huodong-hang">
+        <div class="active">全部</div>
+        <div class="tuan">团购</div>
+        <div class="jiang">降价拍</div>
+    </div>
+    <section>
+        <div class="swiper-container" id="index-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <section id="index-scroll">
+                        <script id="list" type="text/html">
+                        <div class="hd-box">
+                            {{each data as value i}}
+                            <dl>
+                                <img class="a" src={{value.img1}} alt="">
+                                <dt>
+                                    <img src={{value.img2}} alt=""></dt>
+                                <dd><p class="name">{{value.name}}</p>
+                                <p class="jieshao">{{value.jieshao}}
+                                <span class="jia">{{value.jia}}</span>
+                                <span class="shijia">{{value.shijia}}</span></p>
+                                <p class="yishou">{{value.yishou}}</p></dd>
+                            </dl>
+                            {{/each}}
+                        </div>
+                        </script>
+                    </section>
+                </div>
+                <div class="swiper-slide">
+                    <section id="index-scroll2">
+                    <script id="list2" type="text/html">
+                        <div class="hd-box">
+                            {{each data as value i}}
+                            <dl>
+                                <img class="a" src={{value.img1}} alt="">
+                                <dt>
+                                    <img src={{value.img2}} alt=""></dt>
+                                <dd><p class="name">{{value.name}}</p>
+                                    <p class="jieshao">{{value.jieshao}}
+                                        <span class="jia">{{value.jia}}</span>
+                                        <span class="shijia">{{value.shijia}}</span></p>
+                                    <p class="yishou">{{value.yishou}}</p></dd>
+                            </dl>
+                            {{/each}}
+                        </div>
+                    </script>
+                </section></div>
+                <div class="swiper-slide">
+                    <section id="index-scroll3">
+                    <script id="list3" type="text/html">
+                        <div class="hd-box">
+                            {{each data as value i}}
+                            <dl>
+                                <img class="a" src={{value.img1}} alt="">
+                                <dt>
+                                    <img src={{value.img2}} alt=""></dt>
+                                <dd><p class="name">{{value.name}}</p>
+                                    <p class="jieshao">{{value.jieshao}}
+                                        <span class="jia">{{value.jia}}</span>
+                                        <span class="shijia">{{value.shijia}}</span></p>
+                                    <p class="yishou">{{value.yishou}}</p></dd>
+                            </dl>
+                            {{/each}}
+                        </div>
+                    </script>
+                </section></div>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+</div>

@@ -1,0 +1,22 @@
+{
+  "data":[
+    {
+      "img1": "/images/jiangjia.png",
+      "img2": "/images/dd.jpg",
+      "name": "【滋恩】隽永大红袍50g*2罐特惠装",
+      "jieshao": "团购价:",
+      "jia": "￥39.00",
+      "shijia": "市场价:￥176.00",
+      "yishou": "已售77件"
+    },
+    {
+      "img1": "/images/tuangou.png",
+      "img2": "/images/dd2.jpg",
+      "name": "【远荣】清雅特级清香铁观音礼罐装250g*2-兰",
+      "jieshao": "团购价:",
+      "jia": "￥128.00",
+      "shijia": "市场价:￥416.00",
+      "yishou": "已售165件"
+    }
+  ]
+}

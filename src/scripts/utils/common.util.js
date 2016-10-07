@@ -2,6 +2,9 @@ var common = {
   renderBody: function ($el,str) {
       $el.prepend(str);
   },
+  body:function ($el, str) {
+      $el.prepend(str);
+  },
   inner:function($el,str){
     $el.html(str);
   },

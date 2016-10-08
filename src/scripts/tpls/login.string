@@ -1,0 +1,51 @@
+<div class="login-con">
+<header>
+  <ul>
+    <li><img src="/images/my-images/x-w.png" alt=""></li>
+    <li>登录</li>
+    <li></li>
+  </ul>
+</header>
+<section>
+  <div class="top">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <div class="input-box">
+    <div class="input-12">
+      <span></span><input type="text" placeholder="请输入用户名或邮箱">
+      <span></span><input type="password" placeholder="请输入密码">
+    </div>
+    <div class="input-btn">
+        <input type="button" name="name" value="登录">
+    </div>
+    <div class="input-a">
+      <div class="input-al">
+        <a>免费注册</a>
+        <a>忘记密码</a>
+      </div>
+    </div>
+    <div class="input-link">
+      <ul>
+        <li><hr/></li>
+        <li>第三方登录</li>
+        <li><hr/></li>
+      </ul>
+    </div>
+    <div class="input-fenx">
+      <ul>
+        <li><img src="/images/my-images/alipaylogin.png" alt="" /></li>
+        <li><img src="/images/my-images/wechatlogo.png" alt="" /></li>
+        <li><img src="/images/my-images/alipaylogin.png" alt="" /></li>
+        <li><img src="/images/my-images/weibologin.png" alt="" /></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<footer>
+123
+</footer>
+</div>

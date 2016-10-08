@@ -1,7 +1,7 @@
 <div class="container">
     <header>
         <ul>
-            <li class="head-logo"><img src="/build/images/logo.png"></li>
+            <li class="head-logo"><a href="index.html"><img src="/build/images/logo.png"></a></li>
             <li class="header-input">
                 <img src="/build/images/search.png">
                 <input type="text" value  placeholder="搜索">

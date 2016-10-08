@@ -2,7 +2,7 @@
   <div class="searchBox">
       <header>
         <ul>
-            <li class="head-logo searchBack"><img src="http://m.hecha.cn/img/my/back.png"></li>
+            <li class="head-logo searchBack"><a href="index.html"><img src="http://m.hecha.cn/img/my/back.png"></a></li>
             <li class="header-input" >
                 <h2> 搜索结果</h2>
             </li>

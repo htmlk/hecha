@@ -22,7 +22,7 @@
         }
         &:nth-child(2){
           text-align: center;
-          font-size: 4vw;
+          font-size: 5vw;
           color:#fff;
           @include flex(8);
         }
@@ -40,18 +40,19 @@
   }
   #huodong-hang{
     background: #ffffff;
-    height: 40px;
+    height: 12.8vw;
     @include flexbox();
     div{
       @include flex();
       @include border(0 0 1px 0,#cccccc);
       @include align-items(center);
       @include justify-content(center);
-      font-size: 14px;
+      font-size: 4.48vw;
       text-align: center;
-      line-height: 40px;
+      line-height: 12.8vw;
       &.active{
         @include border(0 0 1px 0,orange);
+        color: orange;
       }
     }
   }
@@ -68,7 +69,7 @@
        @include flex-direction(row);
       .swiper-slide{
         @include flex(1) ;
-        width: 375px;
+        width: 120vw;
       }
      }
    }
@@ -81,16 +82,16 @@
       .a{
 
         z-index: 2;
-        width: 40px;
-        height: 60px;
+        width: 12.8vw;
+        height: 19.2vw;
         position: absolute;
         top:0;
-        left: 14px;
+        left: 4.48vw;
       }
       dt{
         margin: 5% 0 0 0;
-        width: 86px;
-        height: 86px;
+        width: 27.52vw;
+        height: 27.52vw;
         img{
           display: block;
           z-index: 1;
@@ -99,28 +100,28 @@
         }
       }
       dd{
-        margin: 0 10px;
+        margin: 0 2.5vw;
         .name{
           color: #444;
         }
         .jieshao{
-          margin: 16px 0;
+          margin: 5.12vw 0;
           color: #89898a;
           font-size: 12px;
           .jia{
-            margin: 0 4px;
-            font-size: 16px;
+            margin: 0 1.28vw;
+            font-size: 5.12vw;
             font-weight: bold;
             color: #ff8561;
           }
           .shijia{
             color: #89898a;
-            font-size: 12px;
+            font-size: 3.84vw;
             text-decoration: line-through;
           }
         }
         .yishou{
-          font-size: 12px;
+          font-size: 3.84vw;
           color: #ff8561;
           text-align: right;
         }

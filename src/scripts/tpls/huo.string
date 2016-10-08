@@ -4,9 +4,8 @@
 		  <li>
 			<a href="index.html"><img src="/build/images/sort.images/back.png" alt="返回"></a>
 		  </li>
-		  <li id="menu">活动</script>
-		  </li>
-		  <li><a href="shoppingCart.html" class="iconfont">&#xe66c;</a></li>
+		  <li id="menu">活动</li>
+            <li></li>
 		</ul>
 	</header>
     <div id="huodong-hang">

@@ -26,7 +26,12 @@
         }
         &:last-child{
           @include flex(1);
-          background-color: red;
+		    line-height: 11.6vw;
+			text-align: center;
+			font-size: 6.15vw;
+          a{
+			color:#fff;
+		  }
         }
       }
     }

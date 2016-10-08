@@ -1,4 +1,4 @@
-﻿var changeLostarage = require('../libs/lostaryFrame.js');
+var changeLostarage = require('../libs/lostaryFrame.js');
 
 var render = require('../utils/common.util.js');
 

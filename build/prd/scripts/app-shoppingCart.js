@@ -44,15 +44,13 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(13);
+	module.exports = __webpack_require__(7);
 
 
 /***/ },
 /* 1 */,
 /* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */
+/* 3 */
 /***/ function(module, exports) {
 
 	/*** IMPORTS FROM imports-loader ***/
@@ -60,9 +58,6 @@
 
 	var common = {
 	  renderBody: function ($el,str) {
-	      $el.prepend(str);
-	  },
-	  body:function ($el, str) {
 	      $el.prepend(str);
 	  },
 	  inner:function($el,str){
@@ -74,9 +69,8 @@
 	  renderHtml:function(str){
 	    $('body').prepend(str);
 	  },
-	  switchPage: function (index) {
-	    $('#footer ul li').eq(index).addClass('active').siblings().removeClass('active');
-	    $('#footer').on('tap', 'li', function () {
+	  switchPage:function(){
+	    $('#footer').on('tap','li',function () {
 	      location.href = $(this).attr('data-url');
 	    })
 	  }
@@ -87,9 +81,7 @@
 
 
 /***/ },
-/* 6 */,
-/* 7 */,
-/* 8 */
+/* 4 */
 /***/ function(module, exports) {
 
 	/*** IMPORTS FROM imports-loader ***/
@@ -2247,36 +2239,122 @@
 
 
 /***/ },
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */
-/***/ function(module, exports, __webpack_require__) {
+/* 5 */,
+/* 6 */
+/***/ function(module, exports) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	__webpack_require__(14);
+	/**
+	 * Created by Administrator on 2016/9/22.
+	 */
+	module.exports = changeLostarage;
+
+	function changeLostarage(num, name, value) {
+	    var argLength = arguments.length;
+	    if (num == 1) {
+	        if (argLength == 1) {
+	            return localStorage;
+	        }
+	        if (argLength == 2) {
+	            return localStorage.getItem(name);
+	        }
+	        if (argLength == 3) {
+	            if (value == "json") {
+	                var localStr = localStorage.getItem(name);
+	                return JSON.parse(localStr);
+	            } else if (value == "number") {
+	                var localStr = localStorage.getItem(name);
+	                return parseInt(localStr);
+	            } else if (value == "string") {
+	                return localStorage.getItem(name);
+	            } else if (value == "date") {
+	                var localStr = localStorage.getItem(name);
+	                return new Date(localStr);
+	            } else if (typeof value == "object") {
+	                if (value instanceof Date) {
+	                    str = value + "";
+	                } else {
+	                    var str = localStorage.getItem(name);
+	                    var arr = [];
+	                    if (str == null) {
+	                        str = "";
+	                    } else {
+	                        var obj = JSON.parse(str);
+	                        arr = obj;
+	                    }
+	                    arr.push(value);
+	                    str = JSON.stringify(arr);
+	                }
+	                localStorage.setItem(name, str);
+	            } else {
+	                localStorage.setItem(name, value);
+	            }
+	        }
+	    }
+	    if (num == 0) {
+	        if (argLength == 1) {
+	            localStorage.clear()
+	        } else {
+	            for (var i = 1; i < argLength; i++) {
+	                localStorage.removeItem(arguments[i]);
+	            }
+	        }
+	    }
+	}
+
+	function changeLocalhost(num, name, value) {
+	    var argLength = arguments.length;
+	    if (num == 1) {
+	        var type = typeof value;
+	        if (type == "object") {
+	            var str;
+	            if (value instanceof Date) {
+	                str = value + "&&" + "type:" + type;
+	            }
+	        }
+	    }
+	    if (num == 0) {
+	        if (argLength == 1) {
+	            localStorage.clear()
+	        } else {
+	            for (var i = 1; i < argLength; i++) {
+	                localStorage.removeItem(arguments[i]);
+	            }
+	        }
+	    }
+	}
 
 
 
 /***/ },
-/* 14 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	var changeLostarage = __webpack_require__(15);
+	__webpack_require__(8);
 
-	var render = __webpack_require__(5);
 
-	var scroll = __webpack_require__(8);
 
-	var strShoppingCart = __webpack_require__(16);
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
 
-	var template = __webpack_require__(17);
+	/*** IMPORTS FROM imports-loader ***/
+	var define = false;
+
+	var changeLostarage = __webpack_require__(6);
+
+	var render = __webpack_require__(3);
+
+	var scroll = __webpack_require__(4);
+
+	var strShoppingCart = __webpack_require__(9);
+
+	var template = __webpack_require__(10);
 
 	render.renderHtml(strShoppingCart);
 
@@ -2406,102 +2484,13 @@
 
 
 /***/ },
-/* 15 */
-/***/ function(module, exports) {
-
-	/*** IMPORTS FROM imports-loader ***/
-	var define = false;
-
-	/**
-	 * Created by Administrator on 2016/9/22.
-	 */
-	module.exports = changeLostarage;
-
-	function changeLostarage(num, name, value) {
-	    var argLength = arguments.length;
-	    if (num == 1) {
-	        if (argLength == 1) {
-	            return localStorage;
-	        }
-	        if (argLength == 2) {
-	            return localStorage.getItem(name);
-	        }
-	        if (argLength == 3) {
-	            if (value == "json") {
-	                var localStr = localStorage.getItem(name);
-	                return JSON.parse(localStr);
-	            } else if (value == "number") {
-	                var localStr = localStorage.getItem(name);
-	                return parseInt(localStr);
-	            } else if (value == "string") {
-	                return localStorage.getItem(name);
-	            } else if (value == "date") {
-	                var localStr = localStorage.getItem(name);
-	                return new Date(localStr);
-	            } else if (typeof value == "object") {
-	                if (value instanceof Date) {
-	                    str = value + "";
-	                } else {
-	                    var str = localStorage.getItem(name);
-	                    var arr = [];
-	                    if (str == null) {
-	                        str = "";
-	                    } else {
-	                        var obj = JSON.parse(str);
-	                        arr = obj;
-	                    }
-	                    arr.push(value);
-	                    str = JSON.stringify(arr);
-	                }
-	                localStorage.setItem(name, str);
-	            } else {
-	                localStorage.setItem(name, value);
-	            }
-	        }
-	    }
-	    if (num == 0) {
-	        if (argLength == 1) {
-	            localStorage.clear()
-	        } else {
-	            for (var i = 1; i < argLength; i++) {
-	                localStorage.removeItem(arguments[i]);
-	            }
-	        }
-	    }
-	}
-
-	function changeLocalhost(num, name, value) {
-	    var argLength = arguments.length;
-	    if (num == 1) {
-	        var type = typeof value;
-	        if (type == "object") {
-	            var str;
-	            if (value instanceof Date) {
-	                str = value + "&&" + "type:" + type;
-	            }
-	        }
-	    }
-	    if (num == 0) {
-	        if (argLength == 1) {
-	            localStorage.clear()
-	        } else {
-	            for (var i = 1; i < argLength; i++) {
-	                localStorage.removeItem(arguments[i]);
-	            }
-	        }
-	    }
-	}
-
-
-
-/***/ },
-/* 16 */
+/* 9 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"container\">    <header>        <div class=\"headerLeft\"><a href=\"/build/index.html\"><img src=\"/build/images/back.png\" alt=\"\"></a></div>        <p>购物车</p>        <div class=\"headerRight\">编辑</div>    </header>    <section id=\"index-scroll\">        <script id=\"list\" type=\"text/html\">            <ul id=\"loadUl\">                {{each data as value i}}                <li>                  <span>{{value.ProductId}}</span>                  <div class=\"liLeft\">                    <img src=\"/build/images/wxz.png\">                    <span></span>                    <img src={{value.ProductImage}}>                  </div>                  <div class=\"liMiddle\">                    <p>{{value.ProductName}}</p>                    <h2><i>数量:</i><span class=\"sub\">-</span><input type=\"text\" value={{value.ProductSaleCount}}><span class=\"add\">+</span></h2>                  </div>                  <div class=\"liRight\">                    <p><span>￥</span><i>{{value.ProductSalePrice}}</i></p>                    <h2>删除商品</h2>                  </div>                </li>                {{/each}}            </ul>        </script>    </section>    <footer>        <div class=\"footerLeft\">            <img src=\"/build/images/wxz.png\">            <span>全选</span>        </div>        <div class=\"footerRight\">            <span>商品</span>            <i>￥<b>0.00</b></i>            <p>结算</p>        </div>    </footer></div>"
 
 /***/ },
-/* 17 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/

@@ -10,7 +10,7 @@
        "ProductMarketPrice": "216.00",
        "ProductComment": "64239",
        "ProductScore": "4.75",
-       "ProductSaleCount": 28
+       "ProductSaleCount": 0
    },
    {
        "ProductId": "020102",
@@ -34,7 +34,7 @@
        "ProductMarketPrice": "119.00",
        "ProductComment": "31665",
        "ProductScore": "4.75",
-       "ProductSaleCount": 19
+       "ProductSaleCount": 0
    },
    {
        "ProductId": "020201",
@@ -46,7 +46,7 @@
        "ProductMarketPrice": "216.00",
        "ProductComment": "12638",
        "ProductScore": "4.75",
-       "ProductSaleCount": 33
+       "ProductSaleCount": 0
    },
    {
        "ProductId": "020202",
@@ -58,7 +58,7 @@
        "ProductMarketPrice": "288.00",
        "ProductComment": "11572",
        "ProductScore": "4.75",
-       "ProductSaleCount": 8
+       "ProductSaleCount": 0
    },
    {
        "ProductId": "020203",
@@ -82,7 +82,7 @@
        "ProductMarketPrice": "95.00",
        "ProductComment": "24721",
        "ProductScore": "4.76",
-       "ProductSaleCount": 44
+       "ProductSaleCount": 0
    },
    {
        "ProductId": "020205",
@@ -94,7 +94,7 @@
        "ProductMarketPrice": "425.00",
        "ProductComment": "35174",
        "ProductScore": "4.75",
-       "ProductSaleCount": 11
+       "ProductSaleCount": 0
    },
    {
        "ProductId": "020301",
@@ -106,7 +106,7 @@
        "ProductMarketPrice": "216.00",
        "ProductComment": "147505",
        "ProductScore": "4.75",
-       "ProductSaleCount": 25
+       "ProductSaleCount": 0
    },
    {
        "ProductId": "020302",
@@ -130,7 +130,7 @@
        "ProductMarketPrice": "298.00",
        "ProductComment": "43294",
        "ProductScore": "4.75",
-       "ProductSaleCount": 6
+       "ProductSaleCount": 0
    },
    {
       "ProductId": "020401",
@@ -142,7 +142,7 @@
       "ProductMarketPrice": "298.00",
       "ProductComment": "23132",
       "ProductScore": "4.75",
-      "ProductSaleCount": 2
+      "ProductSaleCount": 0
   },
   {
       "ProductId": "020402",
@@ -166,7 +166,7 @@
       "ProductMarketPrice": "119.00",
       "ProductComment": "31665",
       "ProductScore": "4.75",
-      "ProductSaleCount": 19
+      "ProductSaleCount": 0
   },
   {
        "ProductId": "020501",
@@ -178,7 +178,7 @@
        "ProductMarketPrice": "158.00",
        "ProductComment": "11497",
        "ProductScore": "4.75",
-       "ProductSaleCount": 15
+       "ProductSaleCount": 0
    },
    {
        "ProductId": "020502",
@@ -190,7 +190,7 @@
        "ProductMarketPrice": "168.00",
        "ProductComment": "13221",
        "ProductScore": "4.78",
-       "ProductSaleCount": 177
+       "ProductSaleCount": 0
    },
    {
         "ProductId": "020601",
@@ -202,7 +202,7 @@
         "ProductMarketPrice": "68.00",
         "ProductComment": "30406",
         "ProductScore": "4.75",
-        "ProductSaleCount": 12
+        "ProductSaleCount": 0
     },
     {
          "ProductId": "020701",
@@ -214,7 +214,7 @@
          "ProductMarketPrice": "118.00",
          "ProductComment": "18339",
          "ProductScore": "4.75",
-         "ProductSaleCount": 32
+         "ProductSaleCount": 0
      },
      {
          "ProductId": "020702",
@@ -226,7 +226,7 @@
          "ProductMarketPrice": "108.00",
          "ProductComment": "5723",
          "ProductScore": "4.75",
-         "ProductSaleCount": 11
+         "ProductSaleCount": 0
      },
      {
          "ProductId": "020703",

@@ -1,0 +1,118 @@
+{
+  "code": 300,
+  "content": {
+    "PageSize": "100",
+    "PageIndex": "1",
+    "TotalItemCount": "4",
+    "ProductList": [
+      {
+        "ProductId": "07a32f7c-de6f-4eae-87fc-e822f9e588d0",
+        "ProductName": "【绿雪芽】白毫银针有机白茶铁罐青花盒75g",
+        "ProductImage": "http://img1.hecha.cn/ProductImages/07a32f7c-de6f-4eae-87fc-e822f9e588d0/20150210050154_m.JPG",
+        "ProductUrl": "",
+        "ProductSaleRule": "1件包邮",
+        "ProductSalePrice": "299.00",
+        "ProductMarketPrice": "378.00",
+        "ProductComment": "34996",
+        "ProductScore": "4.75",
+        "ProductSaleCount": 47
+      },
+      {
+        "ProductId": "0296315b-9408-4dad-ba05-13999d375668",
+        "ProductName": "【首习】福建四大名茶高档（正统红色首礼）",
+        "ProductImage": "http://img1.hecha.cn/ProductImages/0296315b-9408-4dad-ba05-13999d375668/20150824045651_m.JPG",
+        "ProductUrl": "",
+        "ProductSaleRule": "1件包邮",
+        "ProductSalePrice": "1108.00",
+        "ProductMarketPrice": "1900.00",
+        "ProductComment": "1374",
+        "ProductScore": "4.75",
+        "ProductSaleCount": 0
+      },
+      {
+        "ProductId": "8cc97092-8242-4d3a-9098-c6bbb296ca83",
+        "ProductName": "【首习】福建四大名茶中档（正统蓝色尚礼）",
+        "ProductImage": "http://img1.hecha.cn/ProductImages/8cc97092-8242-4d3a-9098-c6bbb296ca83/20150824050903_m.JPG",
+        "ProductUrl": "",
+        "ProductSaleRule": "1件包邮",
+        "ProductSalePrice": "458.00",
+        "ProductMarketPrice": "900.00",
+        "ProductComment": "440",
+        "ProductScore": "4.78",
+        "ProductSaleCount": 2
+      },
+      {
+        "ProductId": "1bedb15d-7dc5-44b2-befb-df878fe8a745",
+        "ProductName": "【绿雪芽】明道白毫银针礼盒200g",
+        "ProductImage": "http://img1.hecha.cn/ProductImages/1bedb15d-7dc5-44b2-befb-df878fe8a745/20150210052035_m.JPG",
+        "ProductUrl": "",
+        "ProductSaleRule": "1件包邮",
+        "ProductSalePrice": "1299.00",
+        "ProductMarketPrice": "1568.00",
+        "ProductComment": "11368",
+        "ProductScore": "4.80",
+        "ProductSaleCount": 2
+      },
+      {
+        "ProductId": "1bedb15d-7dc5-44b2-befb-df878fe8a745",
+        "ProductName": "【绿雪芽】明道白毫银针礼盒200g",
+        "ProductImage": "http://img1.hecha.cn/ProductImages/1bedb15d-7dc5-44b2-befb-df878fe8a745/20150210052035_m.JPG",
+        "ProductUrl": "",
+        "ProductSaleRule": "1件包邮",
+        "ProductSalePrice": "1299.00",
+        "ProductMarketPrice": "1568.00",
+        "ProductComment": "11368",
+        "ProductScore": "4.80",
+        "ProductSaleCount": 2
+      },
+      {
+        "ProductId": "1bedb15d-7dc5-44b2-befb-df878fe8a745",
+        "ProductName": "【绿雪芽】明道白毫银针礼盒200g",
+        "ProductImage": "http://img1.hecha.cn/ProductImages/1bedb15d-7dc5-44b2-befb-df878fe8a745/20150210052035_m.JPG",
+        "ProductUrl": "",
+        "ProductSaleRule": "1件包邮",
+        "ProductSalePrice": "1299.00",
+        "ProductMarketPrice": "1568.00",
+        "ProductComment": "11368",
+        "ProductScore": "4.80",
+        "ProductSaleCount": 2
+      },
+      {
+        "ProductId": "1bedb15d-7dc5-44b2-befb-df878fe8a745",
+        "ProductName": "【绿雪芽】明道白毫银针礼盒200g",
+        "ProductImage": "http://img1.hecha.cn/ProductImages/1bedb15d-7dc5-44b2-befb-df878fe8a745/20150210052035_m.JPG",
+        "ProductUrl": "",
+        "ProductSaleRule": "1件包邮",
+        "ProductSalePrice": "1299.00",
+        "ProductMarketPrice": "1568.00",
+        "ProductComment": "11368",
+        "ProductScore": "4.80",
+        "ProductSaleCount": 2
+      },
+      {
+        "ProductId": "1bedb15d-7dc5-44b2-befb-df878fe8a745",
+        "ProductName": "【绿雪芽】明道白毫银针礼盒200g",
+        "ProductImage": "http://img1.hecha.cn/ProductImages/1bedb15d-7dc5-44b2-befb-df878fe8a745/20150210052035_m.JPG",
+        "ProductUrl": "",
+        "ProductSaleRule": "1件包邮",
+        "ProductSalePrice": "1299.00",
+        "ProductMarketPrice": "1568.00",
+        "ProductComment": "11368",
+        "ProductScore": "4.80",
+        "ProductSaleCount": 2
+      },
+      {
+        "ProductId": "1bedb15d-7dc5-44b2-befb-df878fe8a745",
+        "ProductName": "【绿雪芽】明道白毫银针礼盒200g",
+        "ProductImage": "http://img1.hecha.cn/ProductImages/1bedb15d-7dc5-44b2-befb-df878fe8a745/20150210052035_m.JPG",
+        "ProductUrl": "",
+        "ProductSaleRule": "1件包邮",
+        "ProductSalePrice": "1299.00",
+        "ProductMarketPrice": "1568.00",
+        "ProductComment": "11368",
+        "ProductScore": "4.80",
+        "ProductSaleCount": 2
+      }
+    ]
+  }
+}

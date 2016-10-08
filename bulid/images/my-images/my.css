@@ -1,0 +1,283 @@
+.clear{
+	clear: both;
+}
+.f-left{
+	float: left;
+}
+.f-right{
+	float: right;
+}
+a:link { 
+text-decoration: none; 
+} 
+a:visited { 
+text-decoration: none; 
+} 
+a:hover { 
+text-decoration: none; 
+} 
+a:active { 
+text-decoration: none; 
+} 
+a{
+	color: #595758;
+}
+label{
+	font-weight: normal;
+}
+.img-huise{
+	-webkit-filter: grayscale(1);/* Webkit */ 
+	filter:gray;/* IE6-9 */ 
+	filter: grayscale(1);/* W3C */ 
+}
+*{font-family: "microsoft yahei";}
+.huise{
+	background-color: #C6C7C9;
+	height: 4vw;
+}
+
+
+
+
+.mc{
+	background-color: #66cbff;
+	padding-top: 10vw;
+}
+.my-zuo{
+	width: 86%;
+	padding-left: 24vw;
+}
+.photof{
+	width: 40%;
+}
+.photo{
+    border-radius: 50%;
+    border: 2px #4069ff solid;
+}
+.photo img{
+	width: 100%;
+	border-radius: 50%;
+}
+.myname{
+	width: 60%;
+	padding: 2vw;
+	padding-left: 3vw;
+}
+.my-nickname{
+	color: #ffffff;
+	margin-top: 5vw;
+	font-size: 4vw;
+	width: 100%;
+}
+.my-vip{
+	margin-top: 2.4vw;
+}
+.vip-levelt{
+	font-size: 3vw;
+	line-height: 4.2vw;
+	background-color: #4069ff;
+	color: #ffffff;
+	padding-left: 2vw;
+	padding-top: 0.3vw;
+	padding-right: 1vw;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.vip-levelbiao{
+	font-family: monospace;
+	font-weight: bold;
+	font-size: 3vw;
+	line-height: 4vw;
+	background-color: #ffffff;
+	color: #f5b32b;
+	padding-left: 2vw;
+	padding-top: 0.4vw;
+	padding-right: 2vw;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.my-you{
+	width: 9%;
+	height: 26vw;
+}
+.my-info{
+	line-height: 34vw;
+}
+.my-info img{
+	width: 100%;
+}
+.vip{
+	padding-left: 24vw;
+	padding-right: 12vw;
+}
+.viplogod{
+	width: 12%;
+	margin-right: 7.4vw;
+}
+.viplogo img{
+	width: 100%;
+}
+.vip-dian{
+	margin-top: 1vw;
+	padding-left: 27vw;
+	padding-right: 12vw;
+	padding-bottom: 2vw;
+}
+.vip-sxy{
+	width: 2vw;
+	height: 2vw;
+	border-radius: 50%;
+	background-color: #ffffff;
+}
+.vip-kxy{
+	width: 2vw;
+	height: 2vw;
+	border-radius: 50%;
+	border: 1px #ffffff solid;
+}
+.vip-xian{
+	width: 13vw;
+	border-top: 1px #ffffff solid;
+	margin-top: 1vw;
+}
+/* menu start */
+.vipmenu-row{
+	padding: 2vw;
+	padding-right: 0;
+}
+.shuxian{
+	height: 10.4vw;
+	border-left: 1px #C6C7C9 solid;
+}
+.vipmenu1{
+	text-align: center;
+	width: 24%;
+}
+.jifen{
+	color: #e30013;
+	font-weight: bold;
+	font-size: 4vw;
+}
+.jifen-lab{
+	font-size: 3.4vw;
+	color: #595758;
+}
+.vipmenu2{
+	text-align: center;
+	width: 24%;
+}
+.recordnum{
+	color: #e30013;
+	font-weight: bold;
+	font-size: 4vw;
+}
+.youhuijuan-lab{
+	color: #595758;
+	font-size: 3vw;
+}
+.vipmenu3{
+	padding-top: 1px;
+	text-align: center;
+	width: 25%;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	line-height: 5vw;
+}
+.guanzhuwechat{
+	background-color: #4b9536;
+	border-radius: 2px;
+	font-size: 3vw;
+	color: #ffffff;
+}
+.linghaocha{
+	line-height: 7vw;
+	color: #595758;
+	font-size: 3vw;
+}
+.vipmenu4{
+	width: 25%;
+	padding-left: 2vw;
+	text-align: right;
+}
+.qiandao{
+	margin-top: 1.8vw;
+	background-color: #C6C7C9;
+	padding: 1px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+.qiandao-l{
+	    background-color: #4b9536;
+    border-radius: 50%;
+    line-height: 7vw;
+    color: #ffffff;
+    text-align: center;
+    padding: 3px 2px;
+}
+.qiandao-r{
+	padding-top: 1px;
+	font-size: 3vw;
+	text-align: center;
+	margin-left: 1.2vw;
+}
+.qiandao-r-txt{
+	line-height: 3vw;
+}
+/* menu end */
+/* list start */
+.zp-row{
+	padding-left: 2vw;
+	padding-right: 2vw;
+}
+.zp-row2{
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+}
+.hengxian{
+	border-bottom: 1px #C6C7C9 solid;
+}
+.list-ico{
+	width: 8%;
+}
+.list-title{
+	margin-left: 6vw;
+	color: #595758;
+	font-size: 3.6vw;
+	width: 70%;
+	line-height: 8vw;
+}
+.list-ico2{
+	width: 3%;
+	padding-top: 2px;
+    margin-right: 8%;
+}
+.list-ico img,.list-ico2 img{
+	width: 100%;
+}
+/* list end */
+/* footer */
+.footer-my{
+		height: 17vw;
+}
+.footer{
+	background-color: #eeeef0;
+	height: 17vw;
+    bottom: -1px;
+    padding-top: 2vw;
+}
+.table-card{
+    margin-left: 3vw;
+    width: 16.5vw;
+    margin-top: 1vw;
+    text-align: center;
+}
+.table-card img{
+	width: 50%;
+}
+.foot-text{
+	margin-top: 2px;
+	font-size: 3vw;
+	color: #9d9d9f;
+}
+
+

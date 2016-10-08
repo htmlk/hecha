@@ -1,0 +1,55 @@
+<div class="my-container">
+    <header>
+        <ul>
+            <li></li>
+            <li>
+                <div class="tou"><img src="/images/my-images/hpoto.jpg" alt=""></div>
+                <div class="user">
+                    <div class="tell">18679654648</div>
+                    <div class="vip">
+                      <span>普卡</span><span>vip</span></div>
+                </div>
+            </li>
+            <li><img src="/images/my-images/myinfo.png" alt=""></li>
+        </ul>
+        <ul>
+          <li></li>
+            <li></li>
+            <li><img src="/images/my-images/vip1.png" alt=""></li>
+            <li><img src="/images/my-images/vip2.png" alt=""></li>
+            <li><img src="/images/my-images/vip3.png" alt=""></li>
+            <li><img src="/images/my-images/vip4.png" alt=""></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </header>
+    <!-- section -->
+    <section>
+      <div class="info">
+          <ul>
+            <li><a href="">300</a><span>积分</span></li>
+            <li><a href="">0</a><span>优惠券</span></li>
+            <li><a href="">关注微信</a><span></span></li>
+            <li><a href="">+50</a><span>签到送积分</span></li>
+          </ul>
+      </div>
+      <div class="list">
+        <ul>
+          <li><i></i><a href="">我的订单</a><span></span></li>
+          <li><i></i><a href="">我的收藏</a><span></span></li>
+          <li><i></i><a href="">收货地址管理</a><span></span></li>
+        </ul>
+        <ul>  
+          <li><i></i><a href="">积分商城</a><span></span></li>
+          <li><i></i><a href="">茶生活</a><span></span></li>
+          <li><i></i><a href="">帮助中心</a><span></span></li>
+          <li><i></i><a href="">联系客服</a><span></span></li>
+          <li><i></i><a href="">关于我们</a><span></span></li>
+        </ul>
+      </div>
+
+    </section>
+    <footer>
+
+    </footer>
+</div>

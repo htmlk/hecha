@@ -1,0 +1,83 @@
+{
+  "code": 300,
+  "content": [
+    {
+      "product_id": "92e14b5f-c869-4f53-9975-11740d8d1075",
+      "product_name": "【九曲山】一级正山小种罐装120g（优品）",
+      "product_img_url": "http://img1.hecha.cn/MobileImage/20160810/20160810182009363.jpg",
+      "product_url": "",
+      "product_type": -1,
+      "product_begin_date": null,
+      "product_end_date": null,
+      "product_comment": "4.74",
+      "product_sale_price": "93.00",
+      "product_sale_rule": "",
+      "product_sale_count": 0
+    },
+    {
+      "product_id": "d7b52464-7d62-46c1-b080-19231184e798",
+      "product_name": "【一品堂】功夫云南滇红罐装120g（优品）",
+      "product_img_url": "http://img1.hecha.cn/MobileImage/20160810/20160810183109817.jpg",
+      "product_url": "",
+      "product_type": -1,
+      "product_begin_date": null,
+      "product_end_date": null,
+      "product_comment": "4.75",
+      "product_sale_price": "93.00",
+      "product_sale_rule": "",
+      "product_sale_count": 1
+    },
+    {
+      "product_id": "29622379-e3dc-4eba-a738-cb5334361a78",
+      "product_name": "【岩上来】二级大红袍罐装90g（优品）",
+      "product_img_url": "http://img1.hecha.cn/MobileImage/20160810/20160810184209568.jpg",
+      "product_url": "",
+      "product_type": -1,
+      "product_begin_date": null,
+      "product_end_date": null,
+      "product_comment": "4.74",
+      "product_sale_price": "70.00",
+      "product_sale_rule": "",
+      "product_sale_count": 0
+    },
+    {
+      "product_id": "e2c7ff50-bf7e-45ef-beba-f78c124509bb",
+      "product_name": "【凤巢山】特级荔枝乌龙罐装250g（优品）",
+      "product_img_url": "http://img1.hecha.cn/MobileImage/20160810/20160810185109523.jpg",
+      "product_url": "",
+      "product_type": -1,
+      "product_begin_date": null,
+      "product_end_date": null,
+      "product_comment": "4.74",
+      "product_sale_price": "195.00",
+      "product_sale_rule": "",
+      "product_sale_count": 0
+    },
+    {
+      "product_id": "2eb6c0d9-86d9-445e-9373-22aa2d2fab9f",
+      "product_name": "【闽榕茶业】特级茉莉花茶罐装160g（优品）",
+      "product_img_url": "http://img1.hecha.cn/MobileImage/20160810/20160810180310508.jpg",
+      "product_url": "",
+      "product_type": -1,
+      "product_begin_date": null,
+      "product_end_date": null,
+      "product_comment": "4.75",
+      "product_sale_price": "125.00",
+      "product_sale_rule": "",
+      "product_sale_count": 0
+    },
+    {
+      "product_id": "b4026925-c5cd-4607-ad14-6b489b4ca517",
+      "product_name": "【兰闰】一级浓香铁观音罐装180g（优品）",
+      "product_img_url": "http://img1.hecha.cn/MobileImage/20160810/20160810181410353.jpg",
+      "product_url": "",
+      "product_type": -1,
+      "product_begin_date": null,
+      "product_end_date": null,
+      "product_comment": "4.75",
+      "product_sale_price": "140.00",
+      "product_sale_rule": "",
+      "product_sale_count": 0
+    }
+  ]
+}

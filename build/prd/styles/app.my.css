@@ -665,6 +665,7 @@ a {
 .iconfont {
   font-family: iconfont; }
 
+<<<<<<< HEAD
 .headerRight a {
   position: relative; }
   .headerRight a h2 {
@@ -679,6 +680,8 @@ a {
     text-align: center;
     line-height: .16rem; }
 
+=======
+>>>>>>> master
 .my-container footer {
   height: 16vw;
   background: #eeeef0; }

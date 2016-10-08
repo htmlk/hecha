@@ -58,13 +58,20 @@
 /***/ },
 
 /***/ 5:
+<<<<<<< HEAD
 /***/ function(module, exports, __webpack_require__) {
+=======
+/***/ function(module, exports) {
+>>>>>>> master
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
+<<<<<<< HEAD
 	var changeLostarage = __webpack_require__(6);
 
+=======
+>>>>>>> master
 	var common = {
 	  renderBody: function ($el,str) {
 	      $el.prepend(str);
@@ -86,6 +93,7 @@
 	    $('#footer').on('tap', 'li', function () {
 	      location.href = $(this).attr('data-url');
 	    })
+<<<<<<< HEAD
 	  },
 	  cartNumber:function(){
 	    var arr2=changeLostarage(1, 'shoppingCart', 'json');
@@ -94,6 +102,8 @@
 	    console.log($);
 	    console.log(document.querySelector('.headerRight h2'));
 	    $('.headerRight h2').html(len);
+=======
+>>>>>>> master
 	  }
 	};
 
@@ -103,6 +113,7 @@
 
 /***/ },
 
+<<<<<<< HEAD
 /***/ 6:
 /***/ function(module, exports) {
 
@@ -193,6 +204,8 @@
 
 /***/ },
 
+=======
+>>>>>>> master
 /***/ 30:
 /***/ function(module, exports, __webpack_require__) {
 

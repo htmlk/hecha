@@ -665,6 +665,20 @@ a {
 .iconfont {
   font-family: iconfont; }
 
+.headerRight a {
+  position: relative; }
+  .headerRight a h2 {
+    position: absolute;
+    width: .16rem;
+    height: .16rem;
+    border-radius: .20rem;
+    background-color: #fff;
+    left: .12rem;
+    top: .02rem;
+    font-size: .1rem;
+    text-align: center;
+    line-height: .16rem; }
+
 .my-container footer {
   height: 16vw;
   background: #eeeef0; }

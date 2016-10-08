@@ -137,12 +137,11 @@ function addLocalStorary(id) {
                 var arr = obj.data;
                 for (var i = 0; i < arr.length; i++) {
                     if (arr[i].ProductId === id) {
-                      console.log(id);
                       var flag=false;
                         var arr1 = changeLostarage(1, 'shoppingCart', 'json');
-                        for (var i = 0; i < arr1.length; i++) {
-                            if (arr1[i].ProductId == id) {
-                                arr1[i].ProductSaleCount += 1;
+                        for (var j = 0; j < arr1.length; j++) {
+                            if (arr1[j].ProductId == id) {
+                                arr1[j].ProductSaleCount += 1;
                                 var str = JSON.stringify(arr1);
                                 flag=true;
                                 changeLostarage(1, 'shoppingCart', str);

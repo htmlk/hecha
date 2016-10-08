@@ -44,32 +44,170 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(1);
+	module.exports = __webpack_require__(7);
 
 
 /***/ },
-/* 1 */
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	 __webpack_require__(2);
+	var changeLostarage = __webpack_require__(6);
+
+	var common = {
+	  renderBody: function ($el,str) {
+	      $el.prepend(str);
+	  },
+	  body:function ($el, str) {
+	      $el.prepend(str);
+	  },
+	  inner:function($el,str){
+	    $el.html(str);
+	  },
+	  append:function($el,str){
+	    $el.append(str);
+	  },
+	  renderHtml:function(str){
+	    $('body').prepend(str);
+	  },
+	  switchPage: function (index) {
+	    $('#footer ul li').eq(index).addClass('active').siblings().removeClass('active');
+	    $('#footer').on('tap', 'li', function () {
+	      location.href = $(this).attr('data-url');
+	    })
+	  },
+	  cartNumber:function(){
+	    var arr2=changeLostarage(1, 'shoppingCart', 'json');
+	    var len=arr2.length;
+	    console.log(1);
+	    console.log($);
+	    console.log(document.querySelector('.headerRight h2'));
+	    $('.headerRight h2').html(len);
+	  }
+	};
+
+	module.exports = common;
 
 
 
 /***/ },
-/* 2 */
+/* 6 */
+/***/ function(module, exports) {
+
+	/*** IMPORTS FROM imports-loader ***/
+	var define = false;
+
+	/**
+	 * Created by Administrator on 2016/9/22.
+	 */
+	module.exports = changeLostarage;
+
+	function changeLostarage(num, name, value) {
+	    var argLength = arguments.length;
+	    if (num == 1) {
+	        if (argLength == 1) {
+	            return localStorage;
+	        }
+	        if (argLength == 2) {
+	            return localStorage.getItem(name);
+	        }
+	        if (argLength == 3) {
+	            if (value == "json") {
+	                var localStr = localStorage.getItem(name);
+	                return JSON.parse(localStr);
+	            } else if (value == "number") {
+	                var localStr = localStorage.getItem(name);
+	                return parseInt(localStr);
+	            } else if (value == "string") {
+	                return localStorage.getItem(name);
+	            } else if (value == "date") {
+	                var localStr = localStorage.getItem(name);
+	                return new Date(localStr);
+	            } else if (typeof value == "object") {
+	                if (value instanceof Date) {
+	                    str = value + "";
+	                } else {
+	                    var str = localStorage.getItem(name);
+	                    var arr = [];
+	                    if (str == null) {
+	                        str = "";
+	                    } else {
+	                        var obj = JSON.parse(str);
+	                        arr = obj;
+	                    }
+	                    arr.push(value);
+	                    str = JSON.stringify(arr);
+	                }
+	                localStorage.setItem(name, str);
+	            } else {
+	                localStorage.setItem(name, value);
+	            }
+	        }
+	    }
+	    if (num == 0) {
+	        if (argLength == 1) {
+	            localStorage.clear()
+	        } else {
+	            for (var i = 1; i < argLength; i++) {
+	                localStorage.removeItem(arguments[i]);
+	            }
+	        }
+	    }
+	}
+
+	function changeLocalhost(num, name, value) {
+	    var argLength = arguments.length;
+	    if (num == 1) {
+	        var type = typeof value;
+	        if (type == "object") {
+	            var str;
+	            if (value instanceof Date) {
+	                str = value + "&&" + "type:" + type;
+	            }
+	        }
+	    }
+	    if (num == 0) {
+	        if (argLength == 1) {
+	            localStorage.clear()
+	        } else {
+	            for (var i = 1; i < argLength; i++) {
+	                localStorage.removeItem(arguments[i]);
+	            }
+	        }
+	    }
+	}
+
+
+
+/***/ },
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*** IMPORTS FROM imports-loader ***/
 	var define = false;
 
-	var render = __webpack_require__(3);
+	 __webpack_require__(8);
 
-	var scroll = __webpack_require__(4);
 
-	var strDetail = __webpack_require__(5);
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*** IMPORTS FROM imports-loader ***/
+	var define = false;
+
+	var render = __webpack_require__(5);
+
+	var scroll = __webpack_require__(9);
+
+	var strDetail = __webpack_require__(10);
 
 	var changeLostarage = __webpack_require__(6);
 
@@ -204,12 +342,11 @@
 	                var arr = obj.data;
 	                for (var i = 0; i < arr.length; i++) {
 	                    if (arr[i].ProductId === id) {
-	                      console.log(id);
 	                      var flag=false;
 	                        var arr1 = changeLostarage(1, 'shoppingCart', 'json');
-	                        for (var i = 0; i < arr1.length; i++) {
-	                            if (arr1[i].ProductId == id) {
-	                                arr1[i].ProductSaleCount += 1;
+	                        for (var j = 0; j < arr1.length; j++) {
+	                            if (arr1[j].ProductId == id) {
+	                                arr1[j].ProductSaleCount += 1;
 	                                var str = JSON.stringify(arr1);
 	                                flag=true;
 	                                changeLostarage(1, 'shoppingCart', str);
@@ -234,38 +371,7 @@
 
 
 /***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-	/*** IMPORTS FROM imports-loader ***/
-	var define = false;
-
-	var common = {
-	  renderBody: function ($el,str) {
-	      $el.prepend(str);
-	  },
-	  inner:function($el,str){
-	    $el.html(str);
-	  },
-	  append:function($el,str){
-	    $el.append(str);
-	  },
-	  renderHtml:function(str){
-	    $('body').prepend(str);
-	  },
-	  switchPage:function(){
-	    $('#footer').on('tap','li',function () {
-	      location.href = $(this).attr('data-url');
-	    })
-	  }
-	};
-
-	module.exports = common;
-
-
-
-/***/ },
-/* 4 */
+/* 9 */
 /***/ function(module, exports) {
 
 	/*** IMPORTS FROM imports-loader ***/
@@ -2423,99 +2529,10 @@
 
 
 /***/ },
-/* 5 */
+/* 10 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"container\">    <div class=\"bdsharebuttonbox\">        <a href=\"#\" class=\"bds_more\" data-cmd=\"more\"></a>        <a href=\"#\" class=\"bds_qzone\" data-cmd=\"qzone\" title=\"分享到QQ空间\"></a>        <a href=\"#\" class=\"bds_tsina\" data-cmd=\"tsina\" title=\"分享到新浪微博\"></a>        <a href=\"#\" class=\"bds_tqq\" data-cmd=\"tqq\" title=\"分享到腾讯微博\"></a>        <a href=\"#\" class=\"bds_renren\" data-cmd=\"renren\" title=\"分享到人人网\"></a>        <a href=\"#\" class=\"bds_weixin\" data-cmd=\"weixin\" title=\"分享到微信\"></a>    </div>    <header>        <div class=\"headerLeft\">            <a href=\"/build/index.html\"><img src=\"/build/images/back.png\" alt=\"\"></a>        </div>        <p>商品信息</p>        <div class=\"headerRight\">            <a href=\"/build/shoppingCart.html\"><h2></h2><img src=\"http://m.hecha.cn/img/order/car-bai.png\" alt=\"\"></a>        </div>    </header>    <section id=\"index-scroll\">        <div class=\"allSection\">            <div class=\"swiper-container\">                <div class=\"swiper-wrapper\">                    <!-- <div class=\"swiper-slide\"><img src=\"http://img1.hecha.cn/ProductImage/20160705/20160705111340349_m.jpg\" alt=\"\"></div>                    <div class=\"swiper-slide\"><img src=\"http://img1.hecha.cn/ProductImage/20160705/20160705111640239_m.jpg\" alt=\"\"></div>                    <div class=\"swiper-slide\"><img src=\"http://img1.hecha.cn/ProductImage/20160705/20160705111740646_m.jpg\" alt=\"\"></div>                    <div class=\"swiper-slide\"><img src=\"http://img1.hecha.cn/ProductImage/20160705/20160705111840661_m.jpg\" alt=\"\"></div>                    <div class=\"swiper-slide\"><img src=\"http://img1.hecha.cn/ProductImage/20160705/20160705111940630_m.jpg\" alt=\"\"></div> -->                </div>            </div>            <p class=\"goodName\">但是客服会死殴打后我广发破发泡藕【大风歌爱的佛国考订房</p>            <h2><span>￥</span><i class=\"price\">192</i>&nbsp;&nbsp;&nbsp;<b>市场价&nbsp;:&nbsp;</b>￥<s class=\"afterPrice\">228.00</s></h2>            <h3>客户评分&nbsp;:&nbsp;<span>非常满意</span></h3>            <div class=\"goodArgu\">                商品参数                <div class=\"goodDetail\">                    <ul>                        <li>                            <p class=\"p1\">品牌商家&nbsp;：&nbsp;凤凰山</p>                            <p class=\"p2\">产地&nbsp;：&nbsp;福建省泉州市</p>                        </li>                        <li>                            <p class=\"p1\">等级&nbsp;：&nbsp;特技</p>                            <p class=\"p2\">保质期&nbsp;：&nbsp;18个月</p>                        </li>                        <li>                            <p class=\"p1\">货号&nbsp;：&nbsp;FCS-14021</p>                            <p class=\"p2\">产品规格&nbsp;：&nbsp;25g/罐</p>                        </li>                        <li>存储方式&nbsp;:&nbsp;避光，防潮，防异味</li>                    </ul>                </div>            </div>        </div>    </section>    <footer>        <div class=\"footerLeft\">            <img src=\"/build/images/ren.png\" alt=\"\">            <img src=\"/build/images/weishoucang.png\" alt=\"\">        </div>        <div class=\"footerRight\">            <p>加入购物车</p>            <p>立即购买</p>        </div>    </footer>    <p class=\"addCart\">加入购物车成功</p></div>"
-
-/***/ },
-/* 6 */
-/***/ function(module, exports) {
-
-	/*** IMPORTS FROM imports-loader ***/
-	var define = false;
-
-	/**
-	 * Created by Administrator on 2016/9/22.
-	 */
-	module.exports = changeLostarage;
-
-	function changeLostarage(num, name, value) {
-	    var argLength = arguments.length;
-	    if (num == 1) {
-	        if (argLength == 1) {
-	            return localStorage;
-	        }
-	        if (argLength == 2) {
-	            return localStorage.getItem(name);
-	        }
-	        if (argLength == 3) {
-	            if (value == "json") {
-	                var localStr = localStorage.getItem(name);
-	                return JSON.parse(localStr);
-	            } else if (value == "number") {
-	                var localStr = localStorage.getItem(name);
-	                return parseInt(localStr);
-	            } else if (value == "string") {
-	                return localStorage.getItem(name);
-	            } else if (value == "date") {
-	                var localStr = localStorage.getItem(name);
-	                return new Date(localStr);
-	            } else if (typeof value == "object") {
-	                if (value instanceof Date) {
-	                    str = value + "";
-	                } else {
-	                    var str = localStorage.getItem(name);
-	                    var arr = [];
-	                    if (str == null) {
-	                        str = "";
-	                    } else {
-	                        var obj = JSON.parse(str);
-	                        arr = obj;
-	                    }
-	                    arr.push(value);
-	                    str = JSON.stringify(arr);
-	                }
-	                localStorage.setItem(name, str);
-	            } else {
-	                localStorage.setItem(name, value);
-	            }
-	        }
-	    }
-	    if (num == 0) {
-	        if (argLength == 1) {
-	            localStorage.clear()
-	        } else {
-	            for (var i = 1; i < argLength; i++) {
-	                localStorage.removeItem(arguments[i]);
-	            }
-	        }
-	    }
-	}
-
-	function changeLocalhost(num, name, value) {
-	    var argLength = arguments.length;
-	    if (num == 1) {
-	        var type = typeof value;
-	        if (type == "object") {
-	            var str;
-	            if (value instanceof Date) {
-	                str = value + "&&" + "type:" + type;
-	            }
-	        }
-	    }
-	    if (num == 0) {
-	        if (argLength == 1) {
-	            localStorage.clear()
-	        } else {
-	            for (var i = 1; i < argLength; i++) {
-	                localStorage.removeItem(arguments[i]);
-	            }
-	        }
-	    }
-	}
-
-
+	module.exports = "<div class=\"container\">    <div class=\"bdsharebuttonbox\">        <a href=\"#\" class=\"bds_more\" data-cmd=\"more\"></a>        <a href=\"#\" class=\"bds_qzone\" data-cmd=\"qzone\" title=\"分享到QQ空间\"></a>        <a href=\"#\" class=\"bds_tsina\" data-cmd=\"tsina\" title=\"分享到新浪微博\"></a>        <a href=\"#\" class=\"bds_tqq\" data-cmd=\"tqq\" title=\"分享到腾讯微博\"></a>        <a href=\"#\" class=\"bds_renren\" data-cmd=\"renren\" title=\"分享到人人网\"></a>        <a href=\"#\" class=\"bds_weixin\" data-cmd=\"weixin\" title=\"分享到微信\"></a>    </div>    <header>        <div class=\"headerLeft\">            <a href=\"/build/index.html\"><img src=\"/build/images/back.png\" alt=\"\"></a>        </div>        <p>商品信息</p>        <div class=\"headerRight\">            <a href=\"/build/shoppingCart.html\"><h2></h2><img src=\"http://m.hecha.cn/img/order/car-bai.png\" alt=\"\"></a>        </div>    </header>    <section id=\"index-scroll\">        <div class=\"allSection\">            <div class=\"swiper-container\">                <div class=\"swiper-wrapper\">                    <!-- <div class=\"swiper-slide\"><img src=\"http://img1.hecha.cn/ProductImage/20160705/20160705111340349_m.jpg\" alt=\"\"></div>                    <div class=\"swiper-slide\"><img src=\"http://img1.hecha.cn/ProductImage/20160705/20160705111640239_m.jpg\" alt=\"\"></div>                    <div class=\"swiper-slide\"><img src=\"http://img1.hecha.cn/ProductImage/20160705/20160705111740646_m.jpg\" alt=\"\"></div>                    <div class=\"swiper-slide\"><img src=\"http://img1.hecha.cn/ProductImage/20160705/20160705111840661_m.jpg\" alt=\"\"></div>                    <div class=\"swiper-slide\"><img src=\"http://img1.hecha.cn/ProductImage/20160705/20160705111940630_m.jpg\" alt=\"\"></div> -->                </div>            </div>            <p class=\"goodName\">但是客服会死殴打后我广发破发泡藕【大风歌爱的佛国考订房</p>            <h2><span>￥</span><i>192</i>&nbsp;&nbsp;&nbsp;<b>市场价&nbsp;:&nbsp;</b>￥<s>228.00</s></h2>            <h3>客户评分&nbsp;:&nbsp;<span>非常满意</span></h3>            <div class=\"goodArgu\">                商品参数                <div class=\"goodDetail\">                    <ul>                        <li>                            <p class=\"p1\">品牌商家&nbsp;：&nbsp;凤凰山</p>                            <p class=\"p2\">产地&nbsp;：&nbsp;福建省泉州市</p>                        </li>                        <li>                            <p class=\"p1\">等级&nbsp;：&nbsp;特技</p>                            <p class=\"p2\">保质期&nbsp;：&nbsp;18个月</p>                        </li>                        <li>                            <p class=\"p1\">货号&nbsp;：&nbsp;FCS-14021</p>                            <p class=\"p2\">产品规格&nbsp;：&nbsp;25g/罐</p>                        </li>                        <li>存储方式&nbsp;:&nbsp;避光，防潮，防异味</li>                    </ul>                </div>            </div>            <!-- <img src=\"http://img1.hecha.cn/ProductMemo/20160826/20160826091656616_m.jpg\" class=\"img_1\">            <img src=\"http://img1.hecha.cn/ProductMemo/20160826/20160826091656787_m.jpg\" class=\"img_2\">            <img src=\"http://img1.hecha.cn/ProductMemo/20160826/20160826091756428_m.jpg\" class=\"img_3\">            <img src=\"http://img1.hecha.cn/ProductMemo/20160826/20160826091756616_m.jpg\" class=\"img_4\">            <img src=\"http://img1.hecha.cn/ProductMemo/20160826/20160826091756772_m.jpg\" class=\"img_5\">            <img src=\"http://img1.hecha.cn/ProductMemo/20160826/20160826091856162_m.jpg\" class=\"img_6\">            <img src=\"http://img1.hecha.cn/ProductMemo/20160826/20160826091856569_m.jpg\" class=\"img_7\">            <img src=\"http://img1.hecha.cn/ProductMemo/20160826/20160826092056897_m.jpg\" class=\"img_8\">            <img src=\"http://img1.hecha.cn/ProductMemo/20160826/20160826092156131_m.jpg\" class=\"img_9\">            <img src=\"http://img1.hecha.cn/ProductMemo/20160826/20160826092156334_m.jpg\" class=\"img_10\">            <img src=\"http://img1.hecha.cn/ProductMemo/20160826/20160826092156678_m.jpg\" class=\"img_11\">            <img src=\"http://img1.hecha.cn/ProductMemo/20160826/20160826092156866_m.jpg\" class=\"img_12\">            <img src=\"http://img1.hecha.cn/ProductMemo/20160826/20160826092256522_m.jpg\" class=\"img_13\" alt=\"\"> -->        </div>    </section>    <footer>        <div class=\"footerLeft\">            <img src=\"/build/images/ren.png\" alt=\"\">            <img src=\"/build/images/weishoucang.png\" alt=\"\">        </div>        <div class=\"footerRight\">            <p>加入购物车</p>            <p>立即购买</p>        </div>    </footer>    <p class=\"addCart\">加入购物车成功</p></div>"
 
 /***/ }
 /******/ ]);

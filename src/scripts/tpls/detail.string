@@ -13,7 +13,7 @@
         </div>
         <p>商品信息</p>
         <div class="headerRight">
-            <a href="/build/shoppingCart.html"><img src="http://m.hecha.cn/img/order/car-bai.png" alt=""></a>
+            <a href="/build/shoppingCart.html"><h2></h2><img src="http://m.hecha.cn/img/order/car-bai.png" alt=""></a>
         </div>
     </header>
     <section id="index-scroll">

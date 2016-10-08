@@ -3,6 +3,15 @@ var footer=require('../tpls/footer.string');
 
 var common = require('../utils/common.util.js');
 
+var changeLostarage = require('../libs/lostaryFrame.js');
+
+//购物车商品数目
+//common.cartNumber();
+var arr2=changeLostarage(1, 'shoppingCart', 'json');
+var len=arr2.length;
+console.log(len);
+$('#h2_1').html(len);
+
 common.renderBody($('body'),str);
 common.append($('.container'),footer);
 common.switchPage(1);

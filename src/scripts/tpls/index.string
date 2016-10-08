@@ -6,7 +6,7 @@
             <li class="header-input" >
                 <h2> 搜索结果</h2>
             </li>
-            <li class="iconfont">&#xe66c;</li>
+            <li ><a class="iconfont">&#xe66c;<h2></h2></a></li>
         </ul>
       </header>
        <div class="searchCont">
@@ -30,7 +30,7 @@
                 <img src="/build/images/search.png">
                 <input type="text" value  placeholder="搜索">
             </li>
-            <li><a href="shoppingCart.html" class="iconfont">&#xe66c;</a></li>
+            <li class="headerRight"><a href="shoppingCart.html" class="iconfont"><h2 style="color:#00afc7">0</h2>&#xe66c;</a></li>
         </ul>
     </header>
     <nav>

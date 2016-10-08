@@ -674,8 +674,7 @@ header {
     flex: 1;
     font-size: .16rem; }
   header .headerRight {
-    width: .4rem;
-    font-size: .14rem; }
+    width: .4rem; }
 
 .container {
   width: 100%;

@@ -10,7 +10,7 @@
           {{/each}}
         </script>
       </li>
-      <li><a href="shoppingCart.html" class="iconfont">&#xe66c;</a></li>
+      <li class="headerRight"><a href="shoppingCart.html" class="iconfont">&#xe66c;<h2 id="h2_1" style="color:blue;left:.06rem;width:.08rem;height:.08rem"></h2></a></li>
     </ul>
   </header>
   <nav>

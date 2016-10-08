@@ -1,12 +1,17 @@
 var str = require('../tpls/index.string');
 var footer = require('../tpls/footer.string');
 
+var changeLostarage = require('../libs/lostaryFrame.js');
+
 var common = require('../utils/common.util.js');
 //var iscrollUtil = require('../utils/iscroll.util.js');
 
 common.renderBody($('body'), str);
 common.append($('.container'), footer);
 common.switchPage(2);
+
+//购物车商品数目
+common.cartNumber();
 
 //轮播
 var navSwiper = new Swiper('.swiper-container', {
